@@ -19,7 +19,7 @@ public class Scr_Player : MonoBehaviour {
         moveX = Input.GetAxis("Horizontal");
         moveY  = Input.GetAxis("Vertical");
 
-        player_body.velocity = new Vector3(moveX * player_speed, 0, moveY * player_speed );
+        player_body.velocity = new Vector3(moveX * player_speed, this.player_body.velocity.y, moveY * player_speed );
 
     }
 }
