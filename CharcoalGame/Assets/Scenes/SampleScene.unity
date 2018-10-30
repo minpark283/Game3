@@ -553,6 +553,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 548131369}
+  - component: {fileID: 548131370}
+  - component: {fileID: 548131371}
   m_Layer: 0
   m_Name: Enemy_Generator
   m_TagString: Untagged
@@ -573,6 +575,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &548131370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 548131368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e88c1d1295935408b5b5c840ca6a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &548131371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 548131368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d862e55bf914848a515d8a3b7602cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpawn: {fileID: 1425351863963050, guid: dc28b85b372b63540a1d57035827e6fb, type: 2}
+  spawnList: []
+  numSpawn: 6
+  timeBetweenSpawn: 0
 --- !u!1001 &624442178
 Prefab:
   m_ObjectHideFlags: 0
