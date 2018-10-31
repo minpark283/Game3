@@ -5,6 +5,9 @@ using UnityEngine;
 public class Scr_Level_Design : MonoBehaviour {
 
     Scr_EnemySpawn spawn1;
+    Scr_EnemySpawn spawnRange;
+    Scr_EnemySpawn spawnAdv;
+    Scr_EnemySpawn spawnBoss;
     public GameObject playerobj;
     Rigidbody playerbody;
     public Terrain land;
@@ -17,6 +20,7 @@ public class Scr_Level_Design : MonoBehaviour {
         Debug.Log(landdimension);
         playerobj.GetComponent<Rigidbody>().position = new Vector3 (landdimension.x / 2, playerbody.position.y, landdimension.z /2);
         StartCoroutine(Phase1());
+        
 	}
 	
 	// Update is called once per frame
@@ -30,9 +34,6 @@ public class Scr_Level_Design : MonoBehaviour {
         int quadrant = 1;
         float waitbetweenwaves = 5;
         yield return new WaitForSeconds(2f);
-       
-
-
         while (phase1spawnnumber > 0)
         {
             //quadrant 1
@@ -61,8 +62,69 @@ public class Scr_Level_Design : MonoBehaviour {
 
 
         }
-
-
-
     }
+    //brocolli peas carrot
+    IEnumerator Phase2()
+    {
+
+        yield return new WaitForSeconds(2f);
+        int phase1spawnnumber = 150;
+        int quadrant = 1;
+        float waitbetweenwaves = 5;
+        yield return new WaitForSeconds(2f);
+        while (phase1spawnnumber > 0)
+        {
+            //quadrant 1
+            if (playerbody.position.x <= landdimension.x / 2 && playerbody.position.z <= landdimension.z / 2)
+            {
+                quadrant = 1;
+            }
+            //quadrant 2
+            else if (playerbody.position.x > landdimension.x / 2 && playerbody.position.z <= landdimension.z / 2)
+            {
+                quadrant = 2;
+            }
+            //quadrant 3
+            else if (playerbody.position.x > landdimension.x / 2 && playerbody.position.z > landdimension.z / 2)
+            {
+                quadrant = 3;
+            }
+            //quadrant 4
+            else
+            {
+                quadrant = 4;
+            }
+        }
+    }
+    IEnumerator Phase3()
+        {
+            yield return new WaitForSeconds(2f);
+            int phase1spawnnumber = 200;
+            int quadrant = 1;
+            float waitbetweenwaves = 5;
+            yield return new WaitForSeconds(2f);
+            while (phase1spawnnumber > 0)
+            {
+                //quadrant 1
+                if (playerbody.position.x <= landdimension.x / 2 && playerbody.position.z <= landdimension.z / 2)
+                {
+                    quadrant = 1;
+                }
+                //quadrant 2
+                else if (playerbody.position.x > landdimension.x / 2 && playerbody.position.z <= landdimension.z / 2)
+                {
+                    quadrant = 2;
+                }
+                //quadrant 3
+                else if (playerbody.position.x > landdimension.x / 2 && playerbody.position.z > landdimension.z / 2)
+                {
+                    quadrant = 3;
+                }
+                //quadrant 4
+                else
+                {
+                    quadrant = 4;
+                }
+            }
+        }
 }
