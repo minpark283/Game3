@@ -6,7 +6,10 @@ using UnityEngine.AI;
 public class BroccoliBehavior : MonoBehaviour {
 
     public float speed;
+    public float attackRange;
     public GameObject player;
+
+    public GameObject hitBox;
 
     NavMeshAgent navAgent;
 
@@ -22,13 +25,28 @@ public class BroccoliBehavior : MonoBehaviour {
 	void Start () {
         navAgent = GetComponent<NavMeshAgent>();
         navAgent.Warp(this.transform.position);
+        //navAgent.speed = speed;
         navAgent.destination = player.transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         //Come up with some condition to prevent doing pathfinding every frame
-        navAgent.destination = player.transform.position;
+        //print(this.transform.position.x);
+        //print(this.transform.position.z);
+        //print(Mathf.Sqrt(((this.transform.position.x - player.transform.position.x) * (this.transform.position.x - player.transform.position.x))
+        //    + ((this.transform.position.z - player.transform.position.z) * (this.transform.position.z - player.transform.position.z))));
+        if (Mathf.Sqrt(((this.transform.position.x - player.transform.position.x) * (this.transform.position.x - player.transform.position.x))
+            + ((this.transform.position.z - player.transform.position.z) * (this.transform.position.z - player.transform.position.z))) <= attackRange)
+        {
+            if (navAgent.isStopped != true)
+                navAgent.isStopped = true;
+        }
+        else
+        {
+            navAgent.isStopped = false;
+            navAgent.destination = player.transform.position;
+        }
 		
 	}
 
@@ -50,7 +68,7 @@ public class BroccoliBehavior : MonoBehaviour {
         GameObject.Destroy(this);
     }
 
-    List<Vector2> FindPath(int targX, int targZ)
+    /*List<Vector2> FindPath(int targX, int targZ)
     {
         //print("targ is " + targX + " " + targZ);
         bool found = false;
@@ -180,5 +198,5 @@ public class BroccoliBehavior : MonoBehaviour {
         grid = newGrid;
         print("got here to GiveGrid");
         doStuff = true;
-    }
+    }*/
 }
