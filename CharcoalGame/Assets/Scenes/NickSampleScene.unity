@@ -805,9 +805,9 @@ GameObject:
   - component: {fileID: 1621924675}
   - component: {fileID: 1621924674}
   - component: {fileID: 1621924673}
-  - component: {fileID: 1621924679}
   - component: {fileID: 1621924680}
   - component: {fileID: 1621924681}
+  - component: {fileID: 1621924679}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -921,12 +921,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1621924672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78f67fe8bd23e3d4784ea878f001acc4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4539487ad0f81584fb97af5b5ac04f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beamLength: 10
-  beamCost: 30
-  beamDamage: 0
+  fireCost: 10
+  fireDamage: 0
+  fireSpeed: 50
+  fireRangeTimer: 7.5
+  projectileObject: {fileID: 1425351863963050, guid: dc28b85b372b63540a1d57035827e6fb,
+    type: 2}
 --- !u!114 &1621924680
 MonoBehaviour:
   m_ObjectHideFlags: 0
