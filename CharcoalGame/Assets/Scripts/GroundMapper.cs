@@ -5,6 +5,9 @@ using UnityEngine;
 public class GroundMapper : MonoBehaviour {
 
     public GameObject ground;
+
+    public GameObject testEnemy;
+
     Mesh groundMesh;
     float highestX = 0;
     float highestZ = 0;
@@ -12,6 +15,8 @@ public class GroundMapper : MonoBehaviour {
     float lowestZ = 0;
 
     float[,] grid;
+
+    Vector2 alignValues;
 
     public GameObject[] obstacles;
 	// Use this for initialization
@@ -36,7 +41,7 @@ public class GroundMapper : MonoBehaviour {
                 lowestZ = tr.TransformPoint(meshVerts[x]).z;
         }
         //Create grid to represent level, with each
-        grid = new float[Mathf.FloorToInt(highestX) - Mathf.FloorToInt(lowestX), Mathf.FloorToInt(highestZ) - Mathf.FloorToInt(lowestZ)];
+        grid = new float[Mathf.FloorToInt(highestX) - Mathf.FloorToInt(lowestX) + 1, Mathf.FloorToInt(highestZ) - Mathf.FloorToInt(lowestZ) + 1];
         print(Mathf.FloorToInt(highestX) + " " + Mathf.FloorToInt(lowestX) + " " + Mathf.FloorToInt(highestZ) + " " + Mathf.FloorToInt(lowestZ));
         print((Mathf.FloorToInt(highestX) - Mathf.FloorToInt(lowestX)) + " " + (Mathf.FloorToInt(highestZ) - Mathf.FloorToInt(lowestZ)));
         //print(grid.Length + " " + grid.GetLength(1));
@@ -49,12 +54,16 @@ public class GroundMapper : MonoBehaviour {
             }
         }
 
+        alignValues = new Vector2(Mathf.RoundToInt(lowestX), Mathf.RoundToInt(lowestZ));
+
         
         
         for(int x = 0; x < obstacles.Length; x++)
         {
             obstacles[x].SendMessage("MapConstructionCall", this.gameObject);
         }
+
+        testEnemy.SendMessage("GiveGrid", grid);
 
         for (int x = 0; x < grid.GetLength(0); x++)
         {
@@ -65,6 +74,7 @@ public class GroundMapper : MonoBehaviour {
             }
             print(row);
         }
+        print("Finished with groundmapper");
 
 
     }
