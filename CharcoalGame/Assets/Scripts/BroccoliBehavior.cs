@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class BroccoliBehavior : MonoBehaviour {
 
@@ -20,33 +21,14 @@ public class BroccoliBehavior : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         navAgent = GetComponent<NavMeshAgent>();
+        navAgent.Warp(this.transform.position);
         navAgent.destination = player.transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         //Come up with some condition to prevent doing pathfinding every frame
-        /*if (doStuff)
-        {
-            int targetX = Mathf.FloorToInt(player.transform.position.x) + 5;//Change this to a variable later
-            int targetZ = Mathf.FloorToInt(player.transform.position.z) + 5;//Change this to a variable later
-            List<Vector2> path = this.FindPath(targetX, targetZ);
-            foreach(Vector2 node in path)
-            {
-                grid[Mathf.RoundToInt(node.x), Mathf.RoundToInt(node.y)] = 2;
-            }
-
-            for (int x = 0; x < grid.GetLength(0); x++)
-            {
-                string row = "";
-                for (int y = 0; y < grid.GetLength(1); y++)
-                {
-                    row = row + " " + grid[x, y];
-                }
-                print(row);
-            }
-            doStuff = false;
-        }*/
+        navAgent.destination = player.transform.position;
 		
 	}
 

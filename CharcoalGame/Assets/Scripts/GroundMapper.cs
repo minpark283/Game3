@@ -65,7 +65,7 @@ public class GroundMapper : MonoBehaviour {
 
         testEnemy.SendMessage("GiveGrid", grid);
 
-        for (int x = 0; x < grid.GetLength(0); x++)
+        /*for (int x = 0; x < grid.GetLength(0); x++)
         {
             string row = "";
             for (int y = 0; y < grid.GetLength(1); y++)
@@ -73,7 +73,7 @@ public class GroundMapper : MonoBehaviour {
                 row = row + " " + grid[x, y];
             }
             print(row);
-        }
+        }*/
         print("Finished with groundmapper");
 
 
