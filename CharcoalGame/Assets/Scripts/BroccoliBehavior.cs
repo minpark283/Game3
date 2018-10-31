@@ -7,6 +7,8 @@ public class BroccoliBehavior : MonoBehaviour {
     public float speed;
     public GameObject player;
 
+    NavMeshAgent navAgent;
+
     public int health;
 
     public float[,] grid;
@@ -17,13 +19,14 @@ public class BroccoliBehavior : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-		
+        navAgent = GetComponent<NavMeshAgent>();
+        navAgent.destination = player.transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         //Come up with some condition to prevent doing pathfinding every frame
-        if (doStuff)
+        /*if (doStuff)
         {
             int targetX = Mathf.FloorToInt(player.transform.position.x) + 5;//Change this to a variable later
             int targetZ = Mathf.FloorToInt(player.transform.position.z) + 5;//Change this to a variable later
@@ -43,7 +46,7 @@ public class BroccoliBehavior : MonoBehaviour {
                 print(row);
             }
             doStuff = false;
-        }
+        }*/
 		
 	}
 
@@ -99,7 +102,7 @@ public class BroccoliBehavior : MonoBehaviour {
 
             foreach(Vector2 node in GetPossibleMoves(Mathf.RoundToInt(queue[smallest].x), Mathf.RoundToInt(queue[smallest].y)))
             {
-                print("move from " + queue[smallest] + " is: " + node);
+                //print("move from " + queue[smallest] + " is: " + node);
                 if (node.x == targX && node.y == targZ)
                 {
                     found = true;
@@ -149,6 +152,8 @@ public class BroccoliBehavior : MonoBehaviour {
     List<Vector2> GetPossibleMoves(int x, int z)
     {
         //print(grid.GetLength(0) + " " + grid.GetLength(1));
+
+        
         List<Vector2> ret = new List<Vector2>();
         if (x + 1 < grid.GetLength(0) && z + 1 < grid.GetLength(1))
         {
@@ -175,7 +180,7 @@ public class BroccoliBehavior : MonoBehaviour {
 
         if (x - 1 >= 0)
             if(grid[x - 1, z] != 1)
-                ret.Add(new Vector2(x + 1, z));
+                ret.Add(new Vector2(x - 1, z));
 
         if (x - 1 >= 0 && z + 1 < grid.GetLength(1))
             if(grid[x - 1, z + 1] != 1)
