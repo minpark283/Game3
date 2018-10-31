@@ -42,7 +42,7 @@ public class Scr_EnemySpawn : MonoBehaviour {
         for (int i = 0; i < numofSpawn; i++)
         {
             Debug.Log("Spawn!");
-            Vector3 randomize = new Vector3(Random.Range(-7, 7), 0, Random.Range(-7, 7));
+            Vector3 randomize = new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5));
             location = location + randomize;
             GameObject s = (GameObject)Instantiate(enemySpawn, location, Quaternion.identity);
             s.layer = 11;
