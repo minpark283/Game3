@@ -21,6 +21,7 @@ public class Scr_EnemySpawn : MonoBehaviour {
         {
             Debug.Log("Spawn!");
             GameObject s = (GameObject)Instantiate(enemySpawn, location, Quaternion.identity);
+            s.layer = 11;
             yield return new WaitForSeconds(timeBetweenSpawn);
         }
 
