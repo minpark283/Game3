@@ -34,11 +34,11 @@ public class playerBeam : MonoBehaviour {
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.red, 5f, true);
                 Debug.Log("Hit Enemy");
             } else {
-                //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 10, Color.blue, 100f, true);
+                //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * beamLength, Color.green, 100f, true);
                 Debug.Log("Did not Hit");
             }
             globals.fuel -= (beamCost * Time.deltaTime);
         }
-        Debug.Log(globals.fuel);
+        //Debug.Log(globals.fuel);
     }
 }

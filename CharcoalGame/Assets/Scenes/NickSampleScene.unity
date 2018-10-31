@@ -744,6 +744,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224625727842619952, guid: 30b2b08628925f644980d664e6ed7561,
+        type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224625727842619952, guid: 30b2b08628925f644980d664e6ed7561,
+        type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30b2b08628925f644980d664e6ed7561, type: 2}
   m_IsPrefabAsset: 0
@@ -797,6 +807,7 @@ GameObject:
   - component: {fileID: 1621924673}
   - component: {fileID: 1621924679}
   - component: {fileID: 1621924680}
+  - component: {fileID: 1621924681}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -929,6 +940,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   fuel: 100
+--- !u!114 &1621924681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1621924672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02e72d2437991347b8f1f97abb9234c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeLength: 5
+  meleeDamage: 0
+  meleeCooldown: 1.5
 --- !u!1001 &1634677721
 Prefab:
   m_ObjectHideFlags: 0
