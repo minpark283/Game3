@@ -22,7 +22,7 @@ public class playerBeam : MonoBehaviour {
             int layerMaskTerrain = 1 << 10;
             int layerMaskEnemies = 1 << 11;
 
-            // Does the ray intersect any objects excluding the player layer
+            // does the ray intersect any objects on the terrain layer, enemy layer, or nothing
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, beamLength, layerMaskTerrain)) {
 
 
@@ -34,7 +34,7 @@ public class playerBeam : MonoBehaviour {
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.red, 5f, true);
                 Debug.Log("Hit Enemy");
             } else {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 10, Color.blue, 100f, true);
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 10, Color.blue, 5f, true);
                 Debug.Log("Did not Hit");
             }
             globals.fuel -= (beamCost * Time.deltaTime);
