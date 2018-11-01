@@ -7,17 +7,21 @@ public class BroccoliBehavior : MonoBehaviour {
 
     public float speed;
     public float attackRange;
+    public float attackPerSecond;
+    public float attackDamage;
     public GameObject player;
 
     public GameObject hitBox;
 
     NavMeshAgent navAgent;
+    Animator anim;
 
     public int health;
 
     public float[,] grid;
 
     bool doStuff = false;
+    float lastAttkTime = 0;
 
     //public GameObject player;
     
@@ -27,24 +31,30 @@ public class BroccoliBehavior : MonoBehaviour {
         navAgent.Warp(this.transform.position);
         //navAgent.speed = speed;
         navAgent.destination = player.transform.position;
+        anim = GetComponent<Animator>();
+        hitBox.GetComponent<BroccoliHitScript>().damage = attackDamage;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        //Come up with some condition to prevent doing pathfinding every frame
-        //print(this.transform.position.x);
-        //print(this.transform.position.z);
-        //print(Mathf.Sqrt(((this.transform.position.x - player.transform.position.x) * (this.transform.position.x - player.transform.position.x))
-        //    + ((this.transform.position.z - player.transform.position.z) * (this.transform.position.z - player.transform.position.z))));
         if (Mathf.Sqrt(((this.transform.position.x - player.transform.position.x) * (this.transform.position.x - player.transform.position.x))
             + ((this.transform.position.z - player.transform.position.z) * (this.transform.position.z - player.transform.position.z))) <= attackRange)
         {
             if (navAgent.isStopped != true)
                 navAgent.isStopped = true;
+            if (anim.applyRootMotion != false)
+                anim.applyRootMotion = false;
+            if (Time.time - lastAttkTime >= 1/attackPerSecond)
+            {
+                anim.SetTrigger("attack");
+                lastAttkTime = Time.time;
+            }
+            
         }
         else
         {
             navAgent.isStopped = false;
+            anim.applyRootMotion = true;
             navAgent.destination = player.transform.position;
         }
 		
