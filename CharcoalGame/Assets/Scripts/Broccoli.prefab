@@ -28,7 +28,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1735160052758498
 GameObject:
   m_ObjectHideFlags: 1
@@ -58,7 +58,6 @@ GameObject:
   - component: {fileID: 4927195226054890}
   - component: {fileID: 33393711175896094}
   - component: {fileID: 23052677826000842}
-  - component: {fileID: 65908671021106646}
   - component: {fileID: 65849433226444254}
   - component: {fileID: 54108313919968340}
   m_Layer: 0
@@ -209,18 +208,6 @@ Rigidbody:
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &65849433226444254
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1943676512429402}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65908671021106646
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
