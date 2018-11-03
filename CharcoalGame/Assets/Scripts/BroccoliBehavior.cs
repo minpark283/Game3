@@ -20,7 +20,7 @@ public class BroccoliBehavior : MonoBehaviour {
 
     public float[,] grid;
 
-    bool doStuff = false;
+    //bool doStuff = false;
     float lastAttkTime = 0;
 
     //public GameObject player;
