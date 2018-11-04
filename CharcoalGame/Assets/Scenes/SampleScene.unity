@@ -769,6 +769,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 64971593839881484, guid: 140e361e014b83143ac86d653c7c34a5,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: cb213a7b66123d34b841f7adb07f3c62, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 140e361e014b83143ac86d653c7c34a5, type: 2}
   m_IsPrefabAsset: 0
@@ -792,20 +797,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &1401176756
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1401176754}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 4982b977614fa144e9252d3a566178c4, type: 3}
 --- !u!4 &1401176757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4001228565260218, guid: 140e361e014b83143ac86d653c7c34a5,

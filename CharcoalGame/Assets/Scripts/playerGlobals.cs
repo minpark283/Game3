@@ -15,6 +15,7 @@ public class playerGlobals : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //should comment out later, used to test control and UI
         if (Input.GetKeyDown(KeyCode.Z))
         {
             Debug.Log(this.health);
