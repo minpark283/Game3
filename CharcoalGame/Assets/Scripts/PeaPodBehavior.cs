@@ -57,7 +57,7 @@ public class PeaPodBehavior : MonoBehaviour {
                     projectile.GetComponent<Rigidbody>().useGravity = false;
                     projectile.GetComponent<Rigidbody>().velocity = projectile.transform.forward * fireSpeed;
                     Destroy(projectile, fireRangeTimer);
-                    Physics.IgnoreCollision(gameObject.GetComponentInChildren<Collider>(), projectile.GetComponent<Collider>());
+                    //Physics.IgnoreCollision(gameObject.GetComponentInChildren<Collider>(), projectile.GetComponent<Collider>());
                     cooldown = Time.time + fireCooldown;
                     navAgent.isStopped = true;
                 }

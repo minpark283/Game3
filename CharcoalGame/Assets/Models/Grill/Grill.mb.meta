@@ -52,6 +52,17 @@ ModelImporter:
     100092: transform7
     100094: transform8
     100096: transform9
+    100098: group5
+    100100: pasted__pCube5
+    100102: pasted__pCube5 1
+    100104: pCube5
+    100106: pCylinder3
+    100108: pCylinder4
+    100110: transform21
+    100112: transform22
+    100114: transform23
+    100116: transform24
+    100118: transform25
     400000: //RootNode
     400002: group
     400004: group1
@@ -101,10 +112,34 @@ ModelImporter:
     400092: transform7
     400094: transform8
     400096: transform9
+    400098: group5
+    400100: pasted__pCube5
+    400102: pasted__pCube5 1
+    400104: pCube5
+    400106: pCylinder3
+    400108: pCylinder4
+    400110: transform21
+    400112: transform22
+    400114: transform23
+    400116: transform24
+    400118: transform25
     2100000: lambert1
+    2100002: Wheel_Axel
+    2100004: Wheel_Black_Parts
+    2100006: Wheel_White_Parts
+    2100008: Arm_Cannon
+    2100010: Silver_Arms_and_Legs
+    2100012: Spatula_Handle
+    2100014: Spatula_Arm
+    2100016: Spatula_Metal_Part
+    2100018: Black_Grill
+    2100020: Handles
     2300000: pasted__group3_pasted__pasted__pCylinder2
+    2300002: pCylinder4
     3300000: pasted__group3_pasted__pasted__pCylinder2
+    3300002: pCylinder4
     4300000: pasted__group3_pasted__pasted__pCylinder2
+    4300002: pCylinder4
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
