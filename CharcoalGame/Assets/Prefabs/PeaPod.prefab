@@ -715,7 +715,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1268662799590542}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15424aa065cec9849810b675a8624392, type: 3}
   m_Name: 
@@ -724,7 +724,7 @@ MonoBehaviour:
   attackRange: 5
   fireCooldown: 1
   attackDamage: 0
-  player: {fileID: 0}
+  player: {fileID: 1180891238468436, guid: 0ea4e36e9ea4b8046b1eedc55048519e, type: 2}
   projectileObject: {fileID: 1425351863963050, guid: dc28b85b372b63540a1d57035827e6fb,
     type: 2}
   fireSpeed: 8

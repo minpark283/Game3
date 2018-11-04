@@ -144,9 +144,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   attackRange: 5
-  attackPerSecond: 0
+  fireCooldown: 0
   attackDamage: 0
-  player: {fileID: 0}
+  player: {fileID: 1180891238468436, guid: 0ea4e36e9ea4b8046b1eedc55048519e, type: 2}
+  projectileObject: {fileID: 1425351863963050, guid: dc28b85b372b63540a1d57035827e6fb,
+    type: 2}
+  fireSpeed: 0
+  fireRangeTimer: 0
   health: 0
 --- !u!136 &136074784532571128
 CapsuleCollider:

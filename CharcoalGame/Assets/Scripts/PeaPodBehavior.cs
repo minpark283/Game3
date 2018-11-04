@@ -49,7 +49,7 @@ public class PeaPodBehavior : MonoBehaviour {
             RaycastHit hit;
             if(Physics.Raycast(transform.position, new Vector3(player.transform.position.x - transform.position.x, player.transform.position.y - transform.position.y, player.transform.position.z - transform.position.z), out hit, Mathf.Infinity, layerMaskProjectile))
             {
-                print(hit.transform.gameObject.tag);
+               
                 if(hit.transform.gameObject.tag.Equals("Player") && Time.time >= cooldown)
                 {
                     GameObject projectile = (GameObject)Instantiate(projectileObject, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), transform.rotation);
