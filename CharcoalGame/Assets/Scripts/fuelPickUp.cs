@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class fuelPickUp : MonoBehaviour {
     public float fuelGain;
-    private GameObject player;
     private playerGlobals globals;
     private charcoalSpawner charcoalSpawnerScript;
 
     // Use this for initialization
     void Start () {
-        player = GameObject.Find("Player");
-        globals = player.GetComponent<playerGlobals>();
-        charcoalSpawnerScript = player.GetComponent<charcoalSpawner>();
+        globals = GetComponent<playerGlobals>();
+        charcoalSpawnerScript = GetComponent<charcoalSpawner>();
     }
 
     private void OnCollisionEnter(Collision col) {

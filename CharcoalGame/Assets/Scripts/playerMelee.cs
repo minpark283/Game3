@@ -7,13 +7,11 @@ public class playerMelee : MonoBehaviour {
     public float meleeDamage;
     public float meleeCooldown;
     private float cooldown;
-    private GameObject player;
     private playerGlobals globals;
 
     // Use this for initialization
     void Start() {
-        player = GameObject.Find("Player");
-        globals = player.GetComponent<playerGlobals>();
+        globals = GetComponent<playerGlobals>();
     }
 
     // Update is called once per frame
