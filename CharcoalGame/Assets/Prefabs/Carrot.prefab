@@ -571,10 +571,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  attackRange: 10
+  attackRange: 20
   attackCooldown: 3
   attackDamage: 0
-  player: {fileID: 0}
+  player: {fileID: 1180891238468436, guid: 0ea4e36e9ea4b8046b1eedc55048519e, type: 2}
   hitBox: {fileID: 1517586010441146}
   health: 0
   charging: 0
