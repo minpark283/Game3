@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d862e55bf914848a515d8a3b7602cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpawn: {fileID: 1425351863963050, guid: dc28b85b372b63540a1d57035827e6fb, type: 2}
+  enemySpawn: {fileID: 1286127497402520, guid: 42b8db1a19b81494da4dc2f74d6ec879, type: 2}
   spawnList: []
   land: {fileID: 388930253}
   landdimension: {x: 0, y: 0, z: 0}
