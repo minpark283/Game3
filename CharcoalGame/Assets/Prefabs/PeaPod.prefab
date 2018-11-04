@@ -46,7 +46,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4382539865722908
 Transform:
   m_ObjectHideFlags: 1
@@ -147,6 +147,9 @@ MonoBehaviour:
   attackPerSecond: 0
   attackDamage: 0
   player: {fileID: 0}
+  projectileObject: {fileID: 0}
+  fireSpeed: 8
+  fireRangeTimer: 12
   health: 0
 --- !u!136 &136140810254636472
 CapsuleCollider:

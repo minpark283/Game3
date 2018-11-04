@@ -610,6 +610,27 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1381820957}
+    - target: {fileID: 114776972568776672, guid: 6fcd78d152fe6254da929bda00660d71,
+        type: 2}
+      propertyPath: attackPerSecond
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114776972568776672, guid: 6fcd78d152fe6254da929bda00660d71,
+        type: 2}
+      propertyPath: projectileObject
+      value: 
+      objectReference: {fileID: 1425351863963050, guid: dc28b85b372b63540a1d57035827e6fb,
+        type: 2}
+    - target: {fileID: 114776972568776672, guid: 6fcd78d152fe6254da929bda00660d71,
+        type: 2}
+      propertyPath: fireCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114776972568776672, guid: 6fcd78d152fe6254da929bda00660d71,
+        type: 2}
+      propertyPath: fireRangeTimer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fcd78d152fe6254da929bda00660d71, type: 2}
   m_IsPrefabAsset: 0
@@ -702,7 +723,7 @@ GameObject:
   - component: {fileID: 1381820959}
   - component: {fileID: 1381820958}
   m_Layer: 9
-  m_Name: TestPlayer
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1170,6 +1191,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1381820957}
+    - target: {fileID: 1540019487971944, guid: 6ea8d1ba3ade62f47ae7afaec815ff0c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ea8d1ba3ade62f47ae7afaec815ff0c, type: 2}
   m_IsPrefabAsset: 0

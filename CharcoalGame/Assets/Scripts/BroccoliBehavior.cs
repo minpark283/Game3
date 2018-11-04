@@ -27,6 +27,7 @@ public class BroccoliBehavior : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
+        player = GameObject.Find("Player");
         navAgent = GetComponent<NavMeshAgent>();
         navAgent.Warp(this.transform.position);
         navAgent.speed = speed;
