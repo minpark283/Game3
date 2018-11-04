@@ -21,6 +21,7 @@ public class CarrotBehavior : MonoBehaviour {
     public bool charging;
     Vector3 target;
     public float chargeStrength;
+    public bool midCharge;
 
     public float standUpTime;
 
@@ -38,6 +39,8 @@ public class CarrotBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         navAgent.destination = player.transform.position;
+        //print(midCharge);
+        
         if (!charging && Mathf.Sqrt(((this.transform.position.x - player.transform.position.x) * (this.transform.position.x - player.transform.position.x))
             + ((this.transform.position.z - player.transform.position.z) * (this.transform.position.z - player.transform.position.z))) <= attackRange
             && Time.time - lastAttkTime >= attackCooldown)
@@ -60,13 +63,17 @@ public class CarrotBehavior : MonoBehaviour {
         {
             navAgent.isStopped = false;
         }
-        else if(charging && GetComponent<Rigidbody>().velocity.x <= .1 && GetComponent<Rigidbody>().velocity.z <= .1)
+        if(Mathf.Abs(transform.position.x - target.x) <= 1 && Mathf.Abs(transform.position.z - target.z) <= 1)
         {
+            print("got here");
+
             anim.SetTrigger("StandUp");
             lastAttkTime = Time.time;
             charging = false;
+            midCharge = false;
             hitBox.SetActive(false);
-            //navAgent.isStopped = false;
+            // navAgent.isStopped = false;
+            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         }
     }
 
