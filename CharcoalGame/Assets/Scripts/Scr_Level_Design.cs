@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Scr_Level_Design : MonoBehaviour {
 
@@ -8,7 +9,9 @@ public class Scr_Level_Design : MonoBehaviour {
     Scr_EnemySpawn spawnRange;
     Scr_EnemySpawn spawnAdv;
     Scr_EnemySpawn spawnBoss;
+    public Text waveNuminfo;
     public GameObject playerobj;
+    public int numEnemyinWaves;
     Rigidbody playerbody;
     public Terrain land;
     public Vector3 landdimension;
@@ -31,6 +34,8 @@ public class Scr_Level_Design : MonoBehaviour {
     IEnumerator Phase1()
     {
         int phase1spawnnumber = 100;
+        numEnemyinWaves = phase1spawnnumber;
+        waveNuminfo.text = "Wave: " + numEnemyinWaves;
         int quadrant = 1;
         float waitbetweenwaves = 5;
         yield return new WaitForSeconds(2f);
