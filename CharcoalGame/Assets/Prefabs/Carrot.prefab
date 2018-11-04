@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 33917800703540328}
   - component: {fileID: 23669456110484770}
   - component: {fileID: 136114556983799942}
+  - component: {fileID: 114928945455435204}
   m_Layer: 16
   m_Name: Hitbox
   m_TagString: Untagged
@@ -580,6 +581,17 @@ MonoBehaviour:
   chargeStrength: 15
   midCharge: 0
   standUpTime: 0
+--- !u!114 &114928945455435204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1517586010441146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc76cc961bde18c42abacce05e334e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136114556983799942
 CapsuleCollider:
   m_ObjectHideFlags: 1

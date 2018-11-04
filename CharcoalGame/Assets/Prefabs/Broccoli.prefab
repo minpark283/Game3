@@ -28,7 +28,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1541898607468948
 GameObject:
   m_ObjectHideFlags: 1
@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 23195677505091138}
   - component: {fileID: 135739969580148340}
   - component: {fileID: 114446515618981274}
+  - component: {fileID: 114511768580708276}
   m_Layer: 15
   m_Name: Hitbox
   m_TagString: Untagged
@@ -250,6 +251,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   alreadyHit: 0
+--- !u!114 &114511768580708276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1541898607468948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc76cc961bde18c42abacce05e334e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114964974945793384
 MonoBehaviour:
   m_ObjectHideFlags: 1
