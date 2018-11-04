@@ -19,7 +19,7 @@ public class playerFire : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetMouseButtonDown(0) && (globals.fuel > 0)) {
+        if (Input.GetMouseButtonDown(0) && (globals.fuel >= fireCost)) {
             GameObject projectile = (GameObject)Instantiate(projectileObject, player.transform.position, player.transform.rotation);
             projectile.layer = 12;
             projectile.GetComponent<Rigidbody>().velocity = projectile.transform.forward * fireSpeed;
