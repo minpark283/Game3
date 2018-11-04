@@ -304,10 +304,17 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4001228565260218}
-  - component: {fileID: 114536478082506076}
-  - component: {fileID: 54961828832954038}
   - component: {fileID: 64971593839881484}
-  - component: {fileID: 23097157048771360}
+  - component: {fileID: 114536478082506076}
+  - component: {fileID: 114688566149799216}
+  - component: {fileID: 114376868919677762}
+  - component: {fileID: 114850520076214180}
+  - component: {fileID: 114471192345311856}
+  - component: {fileID: 114758932522101506}
+  - component: {fileID: 114207238593664458}
+  - component: {fileID: 54994727666109062}
+  - component: {fileID: 23552967868194888}
+  - component: {fileID: 114603968952066812}
   m_Layer: 0
   m_Name: Main_Player
   m_TagString: Untagged
@@ -759,7 +766,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1385169640480950}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 50, y: 0.5, z: 50}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 4166958143071192}
@@ -1437,7 +1444,7 @@ Transform:
   m_Father: {fileID: 4076945114656486}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23097157048771360
+--- !u!23 &23552967868194888
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1521,7 +1528,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1862589114356582}
   m_Mesh: {fileID: 4300000, guid: 4982b977614fa144e9252d3a566178c4, type: 3}
---- !u!54 &54961828832954038
+--- !u!54 &54994727666109062
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1549,7 +1556,50 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 4300000, guid: cb213a7b66123d34b841f7adb07f3c62, type: 3}
+--- !u!114 &114207238593664458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1385169640480950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02e72d2437991347b8f1f97abb9234c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeLength: 5
+  meleeDamage: 1
+  meleeCooldown: 1.5
+--- !u!114 &114376868919677762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1385169640480950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4539487ad0f81584fb97af5b5ac04f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireCost: 10
+  fireDamage: 1
+  fireSpeed: 75
+  fireRangeTimer: 7.5
+  projectileObject: {fileID: 1425351863963050, guid: dc28b85b372b63540a1d57035827e6fb,
+    type: 2}
+--- !u!114 &114471192345311856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1385169640480950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25593443ead29044e92c026ab6401d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelGain: 30
 --- !u!114 &114536478082506076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1563,6 +1613,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 25
   cameraTransform: {fileID: 0}
-  rb: {fileID: 54961828832954038}
+  rb: {fileID: 54994727666109062}
   groundCollider: {fileID: 0}
   jumpPower: 10
+--- !u!114 &114603968952066812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1385169640480950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b28a5ba2d7c3ff40807cd58528694b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthBar: {fileID: 0}
+  FuelBar: {fileID: 0}
+--- !u!114 &114688566149799216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1385169640480950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7316d4f63b7425439fa9061f8d380e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  fuel: 100
+--- !u!114 &114758932522101506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1385169640480950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d34a3abf1105c48a2a83f678e37808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peaPodDamage: 1
+  broccoliDamage: 0
+  carrotDamage: 0
+  fuelGain: 25
+--- !u!114 &114850520076214180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1385169640480950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7270a4be83fbf4e9d450359b596e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPointList: []
+  maxNumberOfCharcoal: 6
+  currentNumberOfCharcoal: 0
+  charcoalObject: {fileID: 1847528200770836, guid: 0cf2ba277546d884098baf8bf120b2af,
+    type: 2}
