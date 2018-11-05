@@ -610,6 +610,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1381820957}
+    - target: {fileID: 1268662799590542, guid: 6fcd78d152fe6254da929bda00660d71, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fcd78d152fe6254da929bda00660d71, type: 2}
   m_IsPrefabAsset: 0
@@ -952,6 +956,10 @@ Prefab:
       propertyPath: m_Name
       value: Broccoli
       objectReference: {fileID: 0}
+    - target: {fileID: 1493164987261594, guid: efdac1536bbedf8479356d05f1de73d5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efdac1536bbedf8479356d05f1de73d5, type: 2}
   m_IsPrefabAsset: 0
@@ -1158,6 +1166,15 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1381820957}
+    - target: {fileID: 54720473451883306, guid: 6ea8d1ba3ade62f47ae7afaec815ff0c,
+        type: 2}
+      propertyPath: m_Drag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540019487971944, guid: 6ea8d1ba3ade62f47ae7afaec815ff0c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ea8d1ba3ade62f47ae7afaec815ff0c, type: 2}
   m_IsPrefabAsset: 0

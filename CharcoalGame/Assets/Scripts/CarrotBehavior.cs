@@ -40,7 +40,7 @@ public class CarrotBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         navAgent.destination = player.transform.position;
-        //print(midCharge);
+        print(charging);
         
         if (!charging && Mathf.Sqrt(((this.transform.position.x - player.transform.position.x) * (this.transform.position.x - player.transform.position.x))
             + ((this.transform.position.z - player.transform.position.z) * (this.transform.position.z - player.transform.position.z))) <= attackRange
@@ -49,14 +49,14 @@ public class CarrotBehavior : MonoBehaviour {
             RaycastHit hit;
             if (Physics.Raycast(transform.position, new Vector3(player.transform.position.x - transform.position.x, player.transform.position.y - transform.position.y, player.transform.position.z - transform.position.z), out hit))
             {
-                if (hit.transform.gameObject.tag.Equals("Player"))
+                if (hit.transform.gameObject.tag.Equals("Player") && !charging)
                 {
-
-                    navAgent.isStopped = true;
-                    target = player.transform.position;
-                    Quaternion direction = Quaternion.LookRotation(target - transform.position);
-                    transform.rotation = direction;
-                    anim.SetTrigger("launch");
+                    this.PrepareCharge();
+                    //navAgent.isStopped = true;
+                    //target = player.transform.position;
+                    //Quaternion direction = Quaternion.LookRotation(target - transform.position);
+                    //transform.rotation = direction;
+                    //anim.SetTrigger("launch");
                 }
             }
         }
@@ -73,9 +73,19 @@ public class CarrotBehavior : MonoBehaviour {
             charging = false;
             midCharge = false;
             hitBox.SetActive(false);
-            // navAgent.isStopped = false;
+            navAgent.isStopped = false;
             GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         }
+    }
+
+    void PrepareCharge()
+    {
+        charging = true;
+        navAgent.isStopped = true;
+        target = player.transform.position;
+        Quaternion direction = Quaternion.LookRotation(target - transform.position);
+        transform.rotation = direction;
+        anim.SetTrigger("launch");
     }
 
     public void Launch()
