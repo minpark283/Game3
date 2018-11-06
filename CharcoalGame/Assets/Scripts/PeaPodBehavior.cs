@@ -17,6 +17,7 @@ public class PeaPodBehavior : MonoBehaviour {
     public float fireRangeTimer;
     private float cooldown;
     private int layerMaskProjectile;
+    public bool staggered = false;
 
     NavMeshAgent navAgent;
     Animator anim;
@@ -42,7 +43,7 @@ public class PeaPodBehavior : MonoBehaviour {
 	void Update () {
         navAgent.destination = player.transform.position;
         if(Mathf.Sqrt(((this.transform.position.x - player.transform.position.x) * (this.transform.position.x - player.transform.position.x))
-            + ((this.transform.position.z - player.transform.position.z) * (this.transform.position.z - player.transform.position.z))) <= attackRange)
+            + ((this.transform.position.z - player.transform.position.z) * (this.transform.position.z - player.transform.position.z))) <= attackRange && !staggered)
         {
             Quaternion direction = Quaternion.LookRotation(new Vector3(player.transform.position.x - transform.position.x, transform.position.y, player.transform.position.z - transform.position.z));
             transform.rotation = direction;
@@ -63,7 +64,7 @@ public class PeaPodBehavior : MonoBehaviour {
                 }
             }
         }
-        else
+        else if(!staggered)
         {
             navAgent.isStopped = false;
         }
