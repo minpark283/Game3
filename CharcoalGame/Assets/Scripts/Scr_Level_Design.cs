@@ -33,11 +33,11 @@ public class Scr_Level_Design : MonoBehaviour {
 
     IEnumerator Phase1()
     {
-        int phase1spawnnumber = 100;
+        int phase1spawnnumber = 50;
         numEnemyinWaves = phase1spawnnumber;
         waveNuminfo.text = "Wave: " + numEnemyinWaves;
         int quadrant = 1;
-        float waitbetweenwaves = 5;
+        float waitbetweenwaves = 15;
         yield return new WaitForSeconds(2f);
         while (phase1spawnnumber > 0)
         {
@@ -61,8 +61,8 @@ public class Scr_Level_Design : MonoBehaviour {
             {
                 quadrant = 4;
             }
-            StartCoroutine(spawn1.spawn(10, quadrant));
-            phase1spawnnumber -= 10;
+            StartCoroutine(spawn1.spawn(5, quadrant));
+            phase1spawnnumber -= 5;
             yield return new WaitForSeconds(waitbetweenwaves);
 
 
@@ -73,7 +73,7 @@ public class Scr_Level_Design : MonoBehaviour {
     {
 
         yield return new WaitForSeconds(2f);
-        int phase1spawnnumber = 150;
+        int phase1spawnnumber = 100;
         int quadrant = 1;
         float waitbetweenwaves = 5;
         yield return new WaitForSeconds(2f);
@@ -104,7 +104,7 @@ public class Scr_Level_Design : MonoBehaviour {
     IEnumerator Phase3()
         {
             yield return new WaitForSeconds(2f);
-            int phase1spawnnumber = 200;
+            int phase1spawnnumber = 150;
             int quadrant = 1;
             float waitbetweenwaves = 5;
             yield return new WaitForSeconds(2f);
