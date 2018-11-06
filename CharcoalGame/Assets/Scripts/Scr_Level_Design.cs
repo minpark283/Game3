@@ -132,4 +132,8 @@ public class Scr_Level_Design : MonoBehaviour {
                 }
             }
         }
+    public void updateWaveText()
+    {
+        waveNuminfo.text = "Wave: " + numEnemyinWaves;
+    }
 }
