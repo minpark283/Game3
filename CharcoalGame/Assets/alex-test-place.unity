@@ -1115,14 +1115,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1381820957}
-    - target: {fileID: 54720473451883306, guid: 6ea8d1ba3ade62f47ae7afaec815ff0c,
+    - target: {fileID: 114324745096906978, guid: 6ea8d1ba3ade62f47ae7afaec815ff0c,
         type: 2}
-      propertyPath: m_Drag
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1540019487971944, guid: 6ea8d1ba3ade62f47ae7afaec815ff0c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: attackRange
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ea8d1ba3ade62f47ae7afaec815ff0c, type: 2}
