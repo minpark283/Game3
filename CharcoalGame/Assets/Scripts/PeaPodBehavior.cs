@@ -68,4 +68,22 @@ public class PeaPodBehavior : MonoBehaviour {
             navAgent.isStopped = false;
         }
     }
+
+    void Hit(int damage)
+    {
+        //Deal damage and check for death
+        health = health - damage;
+        if (health <= 0)
+        {
+            //play a death animation maybe?
+            this.Die();
+        }
+        //Possibly a hit animation?
+    }
+
+    void Die()
+    {
+        //Put other stuff, like animations, in here
+        GameObject.Destroy(this);
+    }
 }
