@@ -213,7 +213,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Handles
-    second: {fileID: 2100020, guid: f4753696581ac2842888e2e62f52db83, type: 3}
+    second: {fileID: 2100000, guid: 5d06a95e4bf570d439dab1a63692910f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
