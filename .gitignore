@@ -40,3 +40,5 @@ CharcoalGame/Assets/Scripts/Scr_Player\.cs\.meta
 CharcoalGame/Assets/alex-test-place\.unity\.meta
 
 CharcoalGame/Assets/Animations\.meta
+
+*.meta
