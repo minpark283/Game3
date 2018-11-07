@@ -6,7 +6,7 @@ public class playerGlobals : MonoBehaviour {
     public float health = 100;
     public float fuel = 100;
     player_UI playerdata;
-
+    Scr_StageLoader stage;
 	// Use this for initialization
 	void Start () {
         playerdata = transform.GetComponent<player_UI>();
@@ -20,6 +20,7 @@ public class playerGlobals : MonoBehaviour {
         playerdata.HealthBar.value = health;
 
         if(health <= 0) {
+            stage.ChangeScene("LoseScene");
             // Destroy player
             // go to game over screen
             // other death stuff
