@@ -10,6 +10,7 @@ ModelImporter:
     400002: transform1
     400004: typeMesh1
     2100000: typeBlinn
+    2100002: title
     2300000: typeMesh1
     3300000: typeMesh1
     4300000: typeMesh1
