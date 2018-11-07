@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BroccoliHitScript : MonoBehaviour {
-
+    [Range(0.1f, 1.0f)]
+    public float volume;
+    public AudioClip attackSound;
+    public AudioSource audioSource;
     public float damage;
     public bool alreadyHit;
 	// Use this for initialization
@@ -25,6 +28,7 @@ public class BroccoliHitScript : MonoBehaviour {
             alreadyHit = true;
             //uncomment this when there's a hit script on the player
             other.SendMessage("Hit", damage);
+            audioSource.PlayOneShot(attackSound, volume);
         }
     }
 }

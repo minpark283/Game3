@@ -10,6 +10,10 @@ public class CarrotBehavior : MonoBehaviour {
     public float attackCooldown;
     public float attackDamage;
     public GameObject player;
+    [Range(0.1f, 1.0f)]
+    public float volume;
+    public AudioClip attackSound;
+    public AudioSource audioSource;
     public GameObject deathAnim;
 
     public GameObject hitBox;
@@ -142,6 +146,7 @@ public class CarrotBehavior : MonoBehaviour {
         hitBox.SetActive(true);
         midCharge = true;
         GetComponent<Rigidbody>().AddForce(transform.forward * chargeStrength, ForceMode.Impulse);
+        audioSource.PlayOneShot(attackSound, volume);
     }
 
 }
