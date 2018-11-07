@@ -37,9 +37,17 @@ public class playerMelee : MonoBehaviour {
             }
 
             playerAnimator.SetBool("isAttacking", true);
-            playerAnimator.SetBool("isPickingUp", false);
             Debug.Log("Here");
             cooldown = Time.time + meleeCooldown;
+            delayattk();
+       
         }
+    }
+
+    IEnumerator delayattk()
+    {
+        yield return new WaitForSeconds(1f);
+        playerAnimator.SetBool("isAttacking", false);
+
     }
 }
