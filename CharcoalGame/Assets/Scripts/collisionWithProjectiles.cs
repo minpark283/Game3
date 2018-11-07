@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class collisionWithPeapodShot : MonoBehaviour {
+public class collisionWithProjectiles : MonoBehaviour {
     public AudioClip splatSound;
     public AudioSource audioSource;
 

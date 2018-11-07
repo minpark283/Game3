@@ -232,6 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4136328382815288}
   - component: {fileID: 65821273715301986}
+  - component: {fileID: 114333408633104148}
   m_Layer: 10
   m_Name: tree
   m_TagString: Untagged
@@ -735,3 +736,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.025759067, y: 0.08681274, z: 0.0276268}
   m_Center: {x: -0.0008634281, y: 0.037914123, z: 0}
+--- !u!114 &114333408633104148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523430626808868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c08b9c25d93954b9905cd0929581ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splatSound: {fileID: 8300000, guid: 50e70e852edf1cd489e3ac9a76d08e4f, type: 3}
+  audioSource: {fileID: 82163135669098028, guid: c7fcd0485c67a5a469aa8d4ffdccf2a9,
+    type: 2}

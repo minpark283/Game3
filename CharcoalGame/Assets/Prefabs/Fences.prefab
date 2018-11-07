@@ -83,6 +83,7 @@ GameObject:
   - component: {fileID: 4975575412680528}
   - component: {fileID: 65615868575833108}
   - component: {fileID: 23724789696777848}
+  - component: {fileID: 114630052865476838}
   m_Layer: 0
   m_Name: Fences
   m_TagString: Untagged
@@ -567,3 +568,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0175, y: 0.02, z: 0.005}
   m_Center: {x: 0, y: 0, z: -0.0005}
+--- !u!114 &114630052865476838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1174857759860490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c08b9c25d93954b9905cd0929581ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splatSound: {fileID: 8300000, guid: 50e70e852edf1cd489e3ac9a76d08e4f, type: 3}
+  audioSource: {fileID: 82163135669098028, guid: c7fcd0485c67a5a469aa8d4ffdccf2a9,
+    type: 2}

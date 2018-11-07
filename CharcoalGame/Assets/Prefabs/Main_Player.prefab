@@ -2402,7 +2402,7 @@ Transform:
   m_GameObject: {fileID: 1180891238468436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 50, y: 0, z: 50}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 25, y: 25, z: 25}
   m_Children:
   - {fileID: 4459003922839868}
   - {fileID: 4235127021247028}
@@ -2782,9 +2782,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meleeLength: 5
-  meleeDamage: 1
-  meleeCooldown: 1.5
-  playerAnimator: {fileID: 0}
+  meleeDamage: 8
+  meleeCooldown: 1
+  playerAnimator: {fileID: 95701035942144386}
 --- !u!114 &114384185474571608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2797,7 +2797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPointList: []
-  maxNumberOfCharcoal: 6
+  maxNumberOfCharcoal: 16
   currentNumberOfCharcoal: 0
   charcoalObject: {fileID: 1847528200770836, guid: 0cf2ba277546d884098baf8bf120b2af,
     type: 2}
@@ -2815,11 +2815,12 @@ MonoBehaviour:
   fireCost: 10
   fireSpeed: 75
   fireRangeTimer: 7.5
-  volume: 0
+  volume: 0.25
   projectileObject: {fileID: 1425351863963050, guid: dc28b85b372b63540a1d57035827e6fb,
     type: 2}
-  shootSound: {fileID: 8300000, guid: 95c6875c049602d48a9a8dc0594f1da7, type: 3}
-  audioSource: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: 6caee2fccb94cd74f8222f9bd322985b, type: 3}
+  audioSource: {fileID: 82163135669098028, guid: c7fcd0485c67a5a469aa8d4ffdccf2a9,
+    type: 2}
 --- !u!114 &114431809519648892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2833,11 +2834,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   cameraTransform: {fileID: 0}
-  rb: {fileID: 0}
+  rb: {fileID: 54884589374087094}
   groundCollider: {fileID: 0}
-  jumpPower: 25
-  audioSource: {fileID: 0}
-  movementSound: {fileID: 8300000, guid: af99ed1603184c04db0f5c5696e88a61, type: 3}
+  jumpPower: 40
+  audioSource: {fileID: 82163135669098028, guid: c7fcd0485c67a5a469aa8d4ffdccf2a9,
+    type: 2}
+  movementSound: {fileID: 8300000, guid: 4b7f15a0c88cc4942944c3d364692a48, type: 3}
 --- !u!114 &114537666020786272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2862,14 +2864,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2d34a3abf1105c48a2a83f678e37808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  peaPodDamage: 5
-  broccoliDamage: 5
-  carrotDamage: 5
+  peaPodDamage: 10
+  broccoliDamage: 12
+  carrotDamage: 6
   fuelGain: 25
-  volume: 0
-  splatSound: {fileID: 8300000, guid: 7633e9608b48bf04abf90e0c87a0a37b, type: 3}
-  audioSource: {fileID: 0}
-  playerAnimator: {fileID: 0}
+  volume: 0.25
+  splatSound: {fileID: 8300000, guid: 50e70e852edf1cd489e3ac9a76d08e4f, type: 3}
+  audioSource: {fileID: 82163135669098028, guid: c7fcd0485c67a5a469aa8d4ffdccf2a9,
+    type: 2}
+  playerAnimator: {fileID: 95701035942144386}
 --- !u!114 &114993715393136906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2891,7 +2894,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5181217
-  m_Height: 1.6201894
+  m_Radius: 0.04
+  m_Height: 0.1
   m_Direction: 1
-  m_Center: {x: 0.009061813, y: 0.23316014, z: 0}
+  m_Center: {x: 0, y: 0.05, z: 0}
