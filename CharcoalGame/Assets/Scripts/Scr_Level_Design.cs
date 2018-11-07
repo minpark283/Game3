@@ -13,8 +13,36 @@ public class Scr_Level_Design : MonoBehaviour {
     public Terrain land;
     public Vector3 landdimension;
     int phasetracker = 1;
+
+    int[] level2SpawnSeries = new int[100];
+    int[] level3SpawnSeries = new int[150];
 	// Use this for initialization
 	void Start () {
+        level2SpawnSeries = new int[]
+          {1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1,
+            1, 1, 1, 3, 3,
+            1, 1, 1, 3, 3,
+            1, 1, 1, 3, 3,
+            1, 3, 3, 3, 3,
+            1, 3, 3, 3, 3,
+            1, 3, 3, 3, 3,
+            1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1,
+            1, 1, 2, 3, 3,
+            1, 1, 2, 3, 3,
+            1, 1, 2, 3, 3,
+            1, 2, 2, 3, 3,
+            1, 2, 2, 3, 3,
+            3, 3, 3, 3, 3,
+            2, 2, 2, 2, 2,
+            1, 2, 3, 3, 3 };
+
+
+
+
         spawn1 = transform.GetComponent<Scr_EnemySpawn>();
         playerbody = playerobj.GetComponent<Rigidbody>();
         landdimension = land.terrainData.size;
@@ -59,7 +87,7 @@ public class Scr_Level_Design : MonoBehaviour {
             {
                 quadrant = 4;
             }
-            StartCoroutine(spawn1.spawn(5, quadrant, 1));
+            StartCoroutine(spawn1.spawn(5, quadrant, new int[5] { 1, 1, 1, 1, 1 }));
             phase1spawnnumber -= 5;
             yield return new WaitForSeconds(waitbetweenwaves);
 
@@ -99,7 +127,11 @@ public class Scr_Level_Design : MonoBehaviour {
             {
                 quadrant = 4;
             }
+            StartCoroutine(spawn1.spawn(5, quadrant, new int[5] { level2SpawnSeries[phase2spawnnumber], level2SpawnSeries[phase2spawnnumber] + 1, level2SpawnSeries[phase2spawnnumber] + 2, level2SpawnSeries[phase2spawnnumber] + 3, level2SpawnSeries[phase2spawnnumber] + 4 }));
+            phase2spawnnumber -= 5;
+            yield return new WaitForSeconds(waitbetweenwaves);
         }
+
     }
     IEnumerator Phase3()
         {
