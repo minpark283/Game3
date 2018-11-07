@@ -2906,7 +2906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d862e55bf914848a515d8a3b7602cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn1: {fileID: 100000, guid: e35fdb8e87ff7974891d702ccf1f9ddc, type: 3}
+  spawn1: {fileID: 1514013139112514, guid: e60f33a76b0f6364984b208072dc3611, type: 2}
   spawnRange: {fileID: 1268662799590542, guid: 6fcd78d152fe6254da929bda00660d71, type: 2}
   spawnAdv: {fileID: 1540019487971944, guid: 6ea8d1ba3ade62f47ae7afaec815ff0c, type: 2}
   land: {fileID: 388930253}
@@ -4424,6 +4424,7 @@ GameObject:
   - component: {fileID: 873544108}
   - component: {fileID: 873544107}
   - component: {fileID: 873544106}
+  - component: {fileID: 873544109}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -4476,6 +4477,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!195 &873544109
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 873544105}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &884178105
 Prefab:
   m_ObjectHideFlags: 0

@@ -598,7 +598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ee86ea68fa6a142a0c611538f92389, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileDamage: 0
+  projectileDamage: 4
 --- !u!114 &114776972568776672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -622,9 +622,10 @@ MonoBehaviour:
   fireSpeed: 8
   fireRangeTimer: 1
   staggered: 0
-  volume: 0
-  shootSound: {fileID: 0}
-  audioSource: {fileID: 0}
+  volume: 0.25
+  shootSound: {fileID: 8300000, guid: b4bf2bd2c65b39845a9f91579b8ac6d4, type: 3}
+  audioSource: {fileID: 82163135669098028, guid: c7fcd0485c67a5a469aa8d4ffdccf2a9,
+    type: 2}
   health: 10
 --- !u!136 &136119847566377562
 CapsuleCollider:
