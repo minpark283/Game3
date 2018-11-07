@@ -214,6 +214,26 @@ Prefab:
       propertyPath: m_Name
       value: Player_UI
       objectReference: {fileID: 0}
+    - target: {fileID: 224532644157785044, guid: 9885dee9e1770ef4882aae01667bee86,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224532644157785044, guid: 9885dee9e1770ef4882aae01667bee86,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224049455554122538, guid: 9885dee9e1770ef4882aae01667bee86,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224049455554122538, guid: 9885dee9e1770ef4882aae01667bee86,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9885dee9e1770ef4882aae01667bee86, type: 2}
   m_IsPrefabAsset: 0
