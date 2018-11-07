@@ -10,6 +10,9 @@ public class collisionWithPeapodShot : MonoBehaviour {
         if (collision.gameObject.layer == 12) { // collision with enemy projectile
             audioSource.PlayOneShot(splatSound);
             Destroy(collision.gameObject);
+        } else if (collision.gameObject.layer == 13) { // collision with player projectile
+            Destroy(collision.gameObject);
+            // possible projectile destroy animation/particle effect
         }
     }
 }
