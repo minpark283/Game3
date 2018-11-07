@@ -33,7 +33,7 @@ public class playerMovement : MonoBehaviour {
         forward = forward.normalized;
         right = right.normalized;
         transform.position += (forward * movement.y + right * movement.x) * Time.deltaTime * speed;
-
+        rb.velocity = new Vector3(0, rb.velocity.y, 0);
         // player jump
         if (Input.GetKeyDown(KeyCode.Space) && (isGrounded())) {
             rb.AddForce(0, jumpPower, 0, ForceMode.Impulse); // impulse 

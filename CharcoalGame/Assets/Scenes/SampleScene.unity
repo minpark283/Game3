@@ -325,6 +325,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 224049455554122538, guid: 9885dee9e1770ef4882aae01667bee86,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 217.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9885dee9e1770ef4882aae01667bee86, type: 2}
   m_IsPrefabAsset: 0
@@ -6248,6 +6253,21 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 114912714977787912, guid: 0ea4e36e9ea4b8046b1eedc55048519e,
+        type: 2}
+      propertyPath: peaPodDamage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114912714977787912, guid: 0ea4e36e9ea4b8046b1eedc55048519e,
+        type: 2}
+      propertyPath: broccoliDamage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114912714977787912, guid: 0ea4e36e9ea4b8046b1eedc55048519e,
+        type: 2}
+      propertyPath: carrotDamage
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 64970788027099828, guid: 0ea4e36e9ea4b8046b1eedc55048519e, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 0ea4e36e9ea4b8046b1eedc55048519e, type: 2}
