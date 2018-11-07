@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4499561592322012}
   - component: {fileID: 33982079254218410}
   - component: {fileID: 23317068235066228}
-  - component: {fileID: 135772137751337290}
   - component: {fileID: 54721244096051592}
-  m_Layer: 0
+  - component: {fileID: 135772137751337290}
+  m_Layer: 13
   m_Name: Pre_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

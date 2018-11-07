@@ -10,6 +10,10 @@ public class enemyFire : MonoBehaviour {
     private float cooldown;
     public GameObject projectileObject;
     private GameObject player;
+    [Range(0.1f, 1.0f)]
+    public float volume;
+    public AudioClip shootSound;
+    public AudioSource audioSource;
 
     // Use this for initialization
     void Start() {
@@ -25,6 +29,7 @@ public class enemyFire : MonoBehaviour {
             projectile.GetComponent<Rigidbody>().velocity = projectile.transform.forward * fireSpeed;
             Destroy(projectile, fireRangeTimer);
 
+            audioSource.PlayOneShot(shootSound, volume);
             cooldown = Time.time + fireCooldown;
         }
     }

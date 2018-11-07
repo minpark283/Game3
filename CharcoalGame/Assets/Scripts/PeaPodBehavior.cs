@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class PeaPodBehavior : MonoBehaviour {
-
+    public GameObject levelinfo;
     public float speed;
     public float attackRange;
     public float fireCooldown;
     public float attackDamage;
     public GameObject player;
+    public GameObject deathAnim;
 
     //public GameObject hitBox;
     public GameObject projectileObject;
@@ -17,6 +18,11 @@ public class PeaPodBehavior : MonoBehaviour {
     public float fireRangeTimer;
     private float cooldown;
     private int layerMaskProjectile;
+    public bool staggered = false;
+    [Range(0.1f, 1.0f)]
+    public float volume;
+    public AudioClip shootSound;
+    public AudioSource audioSource;
 
     NavMeshAgent navAgent;
     Animator anim;
@@ -27,6 +33,7 @@ public class PeaPodBehavior : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        levelinfo = GameObject.Find("Enemy_Generator");
         player = GameObject.Find("Player");
         navAgent = GetComponent<NavMeshAgent>();
         navAgent.Warp(this.transform.position);
@@ -42,7 +49,7 @@ public class PeaPodBehavior : MonoBehaviour {
 	void Update () {
         navAgent.destination = player.transform.position;
         if(Mathf.Sqrt(((this.transform.position.x - player.transform.position.x) * (this.transform.position.x - player.transform.position.x))
-            + ((this.transform.position.z - player.transform.position.z) * (this.transform.position.z - player.transform.position.z))) <= attackRange)
+            + ((this.transform.position.z - player.transform.position.z) * (this.transform.position.z - player.transform.position.z))) <= attackRange && !staggered)
         {
             Quaternion direction = Quaternion.LookRotation(new Vector3(player.transform.position.x - transform.position.x, transform.position.y, player.transform.position.z - transform.position.z));
             transform.rotation = direction;
@@ -58,14 +65,44 @@ public class PeaPodBehavior : MonoBehaviour {
                     projectile.GetComponent<Rigidbody>().velocity = projectile.transform.forward * fireSpeed;
                     Destroy(projectile, fireRangeTimer);
                     //Physics.IgnoreCollision(gameObject.GetComponentInChildren<Collider>(), projectile.GetComponent<Collider>());
+
+                    audioSource.PlayOneShot(shootSound, volume);
                     cooldown = Time.time + fireCooldown;
                     navAgent.isStopped = true;
                 }
             }
         }
-        else
+        else if(!staggered)
         {
             navAgent.isStopped = false;
         }
+
+        /*if (Input.GetKeyDown(KeyCode.D))
+        {
+            gameObject.SendMessage("Hit", 10);
+        }*/
+    }
+
+    void Hit(int damage)
+    {
+        //Deal damage and check for death
+        health = health - damage;
+        if (health <= 0)
+        {
+            //play a death animation maybe?
+            this.Die();
+        }
+        //Possibly a hit animation?
+    }
+
+    void Die()
+    {
+        //Put other stuff, like animations, in here
+        levelinfo.GetComponent<Scr_Level_Design>().numEnemyinWaves -= 1;
+        levelinfo.GetComponent<Scr_Level_Design>().updateWaveText();
+
+        GameObject.Instantiate(deathAnim);
+        deathAnim.transform.position = transform.position;
+        GameObject.Destroy(this.gameObject);
     }
 }

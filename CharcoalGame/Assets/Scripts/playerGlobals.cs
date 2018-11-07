@@ -18,6 +18,12 @@ public class playerGlobals : MonoBehaviour {
 	void Update () {
         playerdata.FuelBar.value = fuel;
         playerdata.HealthBar.value = health;
+
+        if(health <= 0) {
+            // Destroy player
+            // go to game over screen
+            // other death stuff
+        }
     }
 }
 
