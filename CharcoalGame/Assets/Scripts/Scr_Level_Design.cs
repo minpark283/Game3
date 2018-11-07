@@ -6,15 +6,13 @@ using UnityEngine.UI;
 public class Scr_Level_Design : MonoBehaviour {
 
     Scr_EnemySpawn spawn1;
-    Scr_EnemySpawn spawnRange;
-    Scr_EnemySpawn spawnAdv;
-    Scr_EnemySpawn spawnBoss;
     public Text waveNuminfo;
     public GameObject playerobj;
     public int numEnemyinWaves;
     Rigidbody playerbody;
     public Terrain land;
     public Vector3 landdimension;
+    int phasetracker = 1;
 	// Use this for initialization
 	void Start () {
         spawn1 = transform.GetComponent<Scr_EnemySpawn>();
@@ -61,7 +59,7 @@ public class Scr_Level_Design : MonoBehaviour {
             {
                 quadrant = 4;
             }
-            StartCoroutine(spawn1.spawn(5, quadrant));
+            StartCoroutine(spawn1.spawn(5, quadrant, 1));
             phase1spawnnumber -= 5;
             yield return new WaitForSeconds(waitbetweenwaves);
 
@@ -73,11 +71,13 @@ public class Scr_Level_Design : MonoBehaviour {
     {
 
         yield return new WaitForSeconds(2f);
-        int phase1spawnnumber = 100;
+        int phase2spawnnumber = 100;
+        numEnemyinWaves = phase2spawnnumber;
+        waveNuminfo.text = "Wave: " + numEnemyinWaves;
         int quadrant = 1;
         float waitbetweenwaves = 5;
         yield return new WaitForSeconds(2f);
-        while (phase1spawnnumber > 0)
+        while (phase2spawnnumber > 0)
         {
             //quadrant 1
             if (playerbody.position.x <= landdimension.x / 2 && playerbody.position.z <= landdimension.z / 2)
