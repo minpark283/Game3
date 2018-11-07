@@ -69,7 +69,7 @@ Transform:
   m_GameObject: {fileID: 1644282516134468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.8, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.643, z: 2.5}
+  m_LocalScale: {x: 200, y: 200, z: 200}
   m_Children:
   - {fileID: 4959043529832466}
   - {fileID: 4808200422691602}
@@ -96,7 +96,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1646910228993920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: -1000.1}
+  m_LocalPosition: {x: -0, y: 0, z: -10.000999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4075909316232528}
@@ -117,12 +117,12 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100002, guid: 7d45cef3c3ceb50488da9325ff1da56c, type: 3}
-  - {fileID: 2100004, guid: 7d45cef3c3ceb50488da9325ff1da56c, type: 3}
-  - {fileID: 2100006, guid: 7d45cef3c3ceb50488da9325ff1da56c, type: 3}
-  - {fileID: 2100008, guid: 7d45cef3c3ceb50488da9325ff1da56c, type: 3}
-  - {fileID: 2100010, guid: 7d45cef3c3ceb50488da9325ff1da56c, type: 3}
-  - {fileID: 2100000, guid: 7d45cef3c3ceb50488da9325ff1da56c, type: 3}
+  - {fileID: 2100000, guid: add879513e1719244aed5332aa394b05, type: 2}
+  - {fileID: 2100000, guid: a1a982fd13f04074da86549ad843c30c, type: 2}
+  - {fileID: 2100000, guid: 1e29a9baea5cdc7448092c175e7a22fc, type: 2}
+  - {fileID: 2100000, guid: 2ead3f03eb2f93e40b03a52e54466b38, type: 2}
+  - {fileID: 2100000, guid: bc63448ae443ae343a7a1904c2b2d308, type: 2}
+  - {fileID: 2100000, guid: d1bb1837476f4954ca10b3984f68cfc6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -183,7 +183,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1369104992071698}
-  m_Mesh: {fileID: 4300000, guid: 7d45cef3c3ceb50488da9325ff1da56c, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 3b275d42f76e758438604ec5c5935069, type: 3}
 --- !u!65 &65663735746579620
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -194,8 +194,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.199559, y: 3.4061456, z: 4.0554504}
-  m_Center: {x: 0.0015434265, y: 0.16606365, z: -0.4561493}
+  m_Size: {x: 0.09791048, y: 0.050090447, z: 0.039918985}
+  m_Center: {x: 0.0008259201, y: 0.008318254, z: -0.0041114613}
 --- !u!65 &65897088916207146
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -206,5 +206,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.42959, y: 4.3818116, z: 7.409262}
-  m_Center: {x: 3.5766969, y: -0.46503785, z: -3.204631}
+  m_Size: {x: 0.035215285, y: 0.05048479, z: 0.08746645}
+  m_Center: {x: 0.03474822, y: 0.0067195366, z: -0.026327638}
