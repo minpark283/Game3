@@ -95,7 +95,7 @@ public class charcoalSpawner : MonoBehaviour {
             if(spawnPointDict.TryGetValue(currentQuadrant, out spawnQuadrantPointList)) {
                 int randomIndex = Random.Range(0, spawnQuadrantPointList.Count);
                 Vector3 spawnPoint = spawnQuadrantPointList[randomIndex];
-                if(!Physics.CheckSphere(spawnPoint + new Vector3(0, 1, 0), .01f)) {
+                if(!Physics.CheckSphere(spawnPoint + new Vector3(0, .5f, 0), .01f)) {
                     GameObject charcoal = (GameObject)Instantiate(charcoalObject, spawnPoint, transform.rotation);
                     charcoal.gameObject.layer = 14;
                     currentNumberOfCharcoal++;
