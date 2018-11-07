@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class PeaPodBehavior : MonoBehaviour {
-
+    public Scr_Level_Design levelinfo;
     public float speed;
     public float attackRange;
     public float fireCooldown;
@@ -28,6 +28,7 @@ public class PeaPodBehavior : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        levelinfo = transform.GetComponent<Scr_Level_Design>();
         player = GameObject.Find("Player");
         navAgent = GetComponent<NavMeshAgent>();
         navAgent.Warp(this.transform.position);
@@ -50,7 +51,7 @@ public class PeaPodBehavior : MonoBehaviour {
             RaycastHit hit;
             if(Physics.Raycast(transform.position, new Vector3(player.transform.position.x - transform.position.x, player.transform.position.y - transform.position.y, player.transform.position.z - transform.position.z), out hit, Mathf.Infinity, layerMaskProjectile))
             {
-                print(hit.transform.gameObject.tag);
+               
                 if(hit.transform.gameObject.tag.Equals("Player") && Time.time >= cooldown)
                 {
                     GameObject projectile = (GameObject)Instantiate(projectileObject, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), transform.rotation);
@@ -85,6 +86,8 @@ public class PeaPodBehavior : MonoBehaviour {
     void Die()
     {
         //Put other stuff, like animations, in here
+        levelinfo.numEnemyinWaves -= 1;
+        levelinfo.updateWaveText();
         GameObject.Destroy(this);
     }
 }

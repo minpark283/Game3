@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class CarrotBehavior : MonoBehaviour {
-
+    public Scr_Level_Design levelinfo;
     public float speed;
     public float attackRange;
     public float attackCooldown;
@@ -29,6 +29,7 @@ public class CarrotBehavior : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        levelinfo = transform.GetComponent<Scr_Level_Design>();
         player = GameObject.Find("Player");
         navAgent = GetComponent<NavMeshAgent>();
         navAgent.Warp(this.transform.position);
@@ -108,6 +109,8 @@ public class CarrotBehavior : MonoBehaviour {
     void Die()
     {
         //Put other stuff, like animations, in here
+        levelinfo.numEnemyinWaves -= 1;
+        levelinfo.updateWaveText();
         GameObject.Destroy(this);
     }
 

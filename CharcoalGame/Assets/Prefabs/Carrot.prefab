@@ -571,7 +571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  attackRange: 10
+  attackRange: 20
   attackCooldown: 3
   attackDamage: 0
   player: {fileID: 0}
