@@ -23,6 +23,9 @@ ModelImporter:
     100034: transform5
     100036: transform6
     100038: //RootNode
+    100040: pCylinder2
+    100042: transform7
+    100044: transform8
     400000: group
     400002: group1
     400004: group2
@@ -43,14 +46,20 @@ ModelImporter:
     400034: transform5
     400036: transform6
     400038: //RootNode
+    400040: pCylinder2
+    400042: transform7
+    400044: transform8
     2100000: Tree
     2100002: Leaves
     2300000: group_pasted__pCube1
     2300002: pCylinder1
+    2300004: pCylinder2
     3300000: group_pasted__pCube1
     3300002: pCylinder1
+    3300004: pCylinder2
     4300000: pCylinder1
     4300002: group_pasted__pCube1
+    4300004: pCylinder2
   externalObjects: {}
   materials:
     importMaterials: 1
