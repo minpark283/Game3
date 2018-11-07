@@ -477,7 +477,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1517586010441146}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -571,6 +571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e373af0b6ce2d4b9eb788ce2280762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelinfo: {fileID: 0}
   speed: 2
   attackRange: 20
   attackCooldown: 3
