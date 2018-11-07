@@ -21,6 +21,7 @@ public class playerCollisions : MonoBehaviour {
     }
 
     private void OnCollisionEnter(Collision collision) {
+        Debug.Log("CARROT ATTK");
         if (collision.gameObject.layer == 12) { // collision with enemy projectile
             globals.health -= peaPodDamage;
             audioSource.PlayOneShot(splatSound, volume);
@@ -38,6 +39,7 @@ public class playerCollisions : MonoBehaviour {
             // play broccoli attack sound
             collision.collider.gameObject.SendMessage("turn hitbox off");
         } else if (collision.gameObject.layer == 16) { // collision with carrot
+            Debug.Log("CARROT ATTK");
             globals.health -= carrotDamage;
             collision.collider.gameObject.SendMessage("turn hitbox off");
         }

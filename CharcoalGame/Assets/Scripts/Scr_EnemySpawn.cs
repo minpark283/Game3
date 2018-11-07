@@ -50,11 +50,11 @@ public class Scr_EnemySpawn : MonoBehaviour {
                 
                 case 1:
                     GameObject b = (GameObject)Instantiate(spawn1, location, Quaternion.identity);
-                    b.layer = 11;
+                    b.layer = 15;
                     break;
                 case 2:
                     GameObject c = (GameObject)Instantiate(spawnAdv, location, Quaternion.identity);
-                    c.layer = 11;
+                    c.layer = 16;
                     break;
                 case 3:
                     GameObject p = (GameObject)Instantiate(spawnRange, location, Quaternion.identity);

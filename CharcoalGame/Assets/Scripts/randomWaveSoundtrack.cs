@@ -15,12 +15,13 @@ public class randomWaveSoundtrack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!playing) {
+        /*if (!playing) {
             int randomIndex = Random.Range(0, soundtrackList.Count);
             AudioClip audioClip = soundtrackList[randomIndex];
             audioSource.clip = audioClip;
             audioSource.Play();
             playing = true;
         }
+        */
     }
 }

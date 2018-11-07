@@ -12,7 +12,7 @@ public class BroccoliBehavior : MonoBehaviour {
     public GameObject player;
     public GameObject deathAnim;
 
-    public GameObject hitBox;
+    //public GameObject hitBox;
 
     NavMeshAgent navAgent;
     Animator anim;
@@ -35,7 +35,7 @@ public class BroccoliBehavior : MonoBehaviour {
         navAgent.speed = speed;
         navAgent.destination = player.transform.position;
         anim = GetComponent<Animator>();
-        hitBox.GetComponent<BroccoliHitScript>().damage = attackDamage;
+        
 	}
 	
 	// Update is called once per frame

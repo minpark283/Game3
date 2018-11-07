@@ -8,7 +8,7 @@ public class Scr_Level_Design : MonoBehaviour {
     Scr_EnemySpawn spawn1;
     public Text waveNuminfo;
     public GameObject playerobj;
-    public int numEnemyinWaves;
+    public int numEnemyinWaves = 50;
     Rigidbody playerbody;
     public Terrain land;
     public Vector3 landdimension;
@@ -81,7 +81,9 @@ public class Scr_Level_Design : MonoBehaviour {
         landdimension = land.terrainData.size;
         Debug.Log(landdimension);
         playerobj.GetComponent<Rigidbody>().position = new Vector3 (landdimension.x / 2, playerbody.position.y, landdimension.z /2);
+     
         StartCoroutine(Phase1());
+
         
 	}
 	
