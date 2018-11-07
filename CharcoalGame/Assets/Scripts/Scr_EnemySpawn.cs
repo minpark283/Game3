@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Scr_EnemySpawn : MonoBehaviour {
-    public GameObject enemySpawn;
-    public List<GameObject> spawnList;
+    public GameObject spawn1;
+    public GameObject spawnRange;
+    public GameObject spawnAdv;
     public Terrain land;
     public Vector3 landdimension;
     //Spawn Data
@@ -14,38 +15,53 @@ public class Scr_EnemySpawn : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         landdimension = land.terrainData.size;
-        spawnList = new List<GameObject>();
+       
 	}
 	
-	public IEnumerator spawn(float numofSpawn, int quad)
+	public IEnumerator spawn(float numofSpawn, int quad, int[] id)
     {
         Vector3 location = new Vector3(0, 0, 0);
         switch (quad)
         {
             case 1:
-                location.x = (Random.Range(1.25f * (landdimension.x / 2), (landdimension.x)) -7);
-                location.z = (Random.Range(1.25f * (landdimension.z / 2), (landdimension.z)) - 7);
+                location.x = 260;
+                location.z = 260;
                 break;
             case 2:
-                location.x = (Random.Range(7, .75f * (landdimension.x / 2)));
-                location.z = (Random.Range(1.25f * (landdimension.z / 2), (landdimension.z)) -7);
+                location.x = 60;
+                location.z = 255;
                 break;
             case 3:
-                location.x = (Random.Range(7, .75f * (landdimension.x / 2)));
-                location.z = (Random.Range(7, .75f * (landdimension.z /2)));
+                location.x = 40;
+                location.z = 40;
                 break;
             case 4:
-                location.x = (Random.Range(1.25f * (landdimension.x / 2), (landdimension.x)) -7);
-                location.z = (Random.Range(7, .75f * (landdimension.z / 2)));
+                location.x = 260;
+                location.z = 22;
                 break;
         }
         for (int i = 0; i < numofSpawn; i++)
         {
-            
+
             Vector3 randomize = new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5));
             location = location + randomize;
-            GameObject s = (GameObject)Instantiate(enemySpawn, location, Quaternion.identity);
-            s.layer = 11;
+            switch (id[i])
+            {
+                
+                case 1:
+                    GameObject b = (GameObject)Instantiate(spawn1, location, Quaternion.identity);
+                    b.layer = 15;
+                    break;
+                case 2:
+                    GameObject c = (GameObject)Instantiate(spawnAdv, location, Quaternion.identity);
+                    c.layer = 16;
+                    break;
+                case 3:
+                    GameObject p = (GameObject)Instantiate(spawnRange, location, Quaternion.identity);
+                    p.layer = 11;
+                    break;
+            }
+           
             yield return new WaitForSeconds(timeBetweenSpawn);
         }
 

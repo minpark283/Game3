@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class enemyCollisionWithProjectile : MonoBehaviour {
     public float peaPodDamage;
-    private GameObject player;
+    public GameObject player;
     private playerGlobals globals;
 
     // Use this for initialization
@@ -13,11 +13,14 @@ public class enemyCollisionWithProjectile : MonoBehaviour {
         globals = player.GetComponent<playerGlobals>();
     }
 
-    private void OnCollisionEnter(Collision hitBy) {
-        /*if(hitBy.gameObject.layer == 12) { // collision with projectile
-            // take health from enemy
+     void OnCollisionEnter(Collision hitBy) {
+        Debug.Log("Outer");
+        if (hitBy.gameObject.layer == 13)
+        { // collision with projectile
+            Debug.Log("Inner");
+            gameObject.SendMessage("Hit", 5);
             // possible projectile animation on destroy
             Destroy(hitBy.gameObject);
-        }*/
+        }
     }
 }

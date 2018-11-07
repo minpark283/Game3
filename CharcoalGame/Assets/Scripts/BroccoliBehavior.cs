@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class BroccoliBehavior : MonoBehaviour {
-
+    public GameObject levelinfo;
     public float speed;
     public float attackRange;
     public float attackPerSecond;
     public float attackDamage;
     public GameObject player;
+    public GameObject deathAnim;
 
-    public GameObject hitBox;
+    //public GameObject hitBox;
 
     NavMeshAgent navAgent;
     Animator anim;
@@ -27,13 +28,14 @@ public class BroccoliBehavior : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
+        levelinfo = GameObject.Find("Enemy_Generator");
         player = GameObject.Find("Player");
         navAgent = GetComponent<NavMeshAgent>();
         navAgent.Warp(this.transform.position);
         navAgent.speed = speed;
         navAgent.destination = player.transform.position;
         anim = GetComponent<Animator>();
-        hitBox.GetComponent<BroccoliHitScript>().damage = attackDamage;
+        
 	}
 	
 	// Update is called once per frame
@@ -58,24 +60,36 @@ public class BroccoliBehavior : MonoBehaviour {
             anim.applyRootMotion = true;
             navAgent.destination = player.transform.position;
         }
+
+        //For testing
+        /*if(Input.GetKeyDown(KeyCode.D))
+        {
+            gameObject.SendMessage("Hit", 10);
+        }*/
 		
 	}
 
-    void Hit(int damage)
+    public void Hit(int damage)
     {
         //Deal damage and check for death
+        Debug.Log(health);
         health = health - damage;
         if(health <= 0)
         {
-            //play a death animation maybe?
+            
             this.Die();
         }
         //Possibly a hit animation?
     }
 
-    void Die()
+    public void Die()
     {
         //Put other stuff, like animations, in here
-        GameObject.Destroy(this);
+        levelinfo.GetComponent<Scr_Level_Design>().numEnemyinWaves -= 1;
+        levelinfo.GetComponent<Scr_Level_Design>().updateWaveText();
+      
+        GameObject.Instantiate(deathAnim);
+        deathAnim.transform.position = transform.position;
+        GameObject.Destroy(this.gameObject);
     }
 }

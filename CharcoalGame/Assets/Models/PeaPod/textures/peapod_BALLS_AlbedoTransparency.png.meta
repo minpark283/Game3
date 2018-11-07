@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 179e40e8b0b8ae84ca3c0d643ab5ef99
+=======
+guid: acd741907a4acd94c9c9214854eb31de
+>>>>>>> Art
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -34,9 +38,15 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
+<<<<<<< HEAD
     wrapU: -1
     wrapV: -1
     wrapW: -1
+=======
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+>>>>>>> Art
   nPOTScale: 1
   lightmap: 0
   compressionQuality: 50
@@ -60,8 +70,24 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
+<<<<<<< HEAD
     maxTextureSize: 2048
     resizeAlgorithm: 0
+=======
+    maxTextureSize: 1024
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 1
+>>>>>>> Art
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50

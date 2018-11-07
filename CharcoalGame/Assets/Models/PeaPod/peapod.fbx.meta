@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: e9d6135064a659c429371e08e41318eb
+=======
+guid: da43cb0af1211f643b42d66ff781546f
+>>>>>>> Art
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -43,12 +47,31 @@ ModelImporter:
     2300000: group_pasted__pSphere1
     3300000: group_pasted__pSphere1
     4300000: group_pasted__pSphere1
+<<<<<<< HEAD
   externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
+=======
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BALLS
+    second: {fileID: 2100000, guid: 87d5e627bc8227246be20426c4a7cdd0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 8a318cdc4bb751f4d82d8f505acf62ed, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 0
+    materialLocation: 0
+>>>>>>> Art
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
