@@ -248,7 +248,7 @@ Transform:
   m_GameObject: {fileID: 1540019487971944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 113.9, y: 1.25, z: 160}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 4263021605865660}
   - {fileID: 4017165145122186}
@@ -591,8 +591,10 @@ MonoBehaviour:
   attackCooldown: 3
   attackDamage: 0
   player: {fileID: 0}
-  volume: 0
-  attackSound: {fileID: 8300000, guid: e12e4d733595e0b40afb9e03cb4aa358, type: 3}
+  volume: 0.25
+  attackSound: {fileID: 8300000, guid: a6d2c45928cda6c43b0793bb5a746a8e, type: 3}
+  audioSource: {fileID: 82163135669098028, guid: c7fcd0485c67a5a469aa8d4ffdccf2a9,
+    type: 2}
   deathAnim: {fileID: 1126146184238100, guid: 55820773b7ead724ea00359e69ac8352, type: 2}
   hitBox: {fileID: 1707613525033138}
   health: 10
@@ -622,8 +624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ee86ea68fa6a142a0c611538f92389, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  peaPodDamage: 5
-  player: {fileID: 1180891238468436, guid: 0ea4e36e9ea4b8046b1eedc55048519e, type: 2}
+  projectileDamage: 4
 --- !u!135 &135695615669158102
 SphereCollider:
   m_ObjectHideFlags: 1
