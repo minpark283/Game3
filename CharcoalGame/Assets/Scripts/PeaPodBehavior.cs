@@ -19,6 +19,10 @@ public class PeaPodBehavior : MonoBehaviour {
     private float cooldown;
     private int layerMaskProjectile;
     public bool staggered = false;
+    [Range(0.1f, 1.0f)]
+    public float volume;
+    public AudioClip shootSound;
+    public AudioSource audioSource;
 
     NavMeshAgent navAgent;
     Animator anim;
@@ -61,6 +65,8 @@ public class PeaPodBehavior : MonoBehaviour {
                     projectile.GetComponent<Rigidbody>().velocity = projectile.transform.forward * fireSpeed;
                     Destroy(projectile, fireRangeTimer);
                     //Physics.IgnoreCollision(gameObject.GetComponentInChildren<Collider>(), projectile.GetComponent<Collider>());
+
+                    audioSource.PlayOneShot(shootSound, volume);
                     cooldown = Time.time + fireCooldown;
                     navAgent.isStopped = true;
                 }

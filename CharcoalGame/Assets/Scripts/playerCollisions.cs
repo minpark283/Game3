@@ -9,6 +9,10 @@ public class playerCollisions : MonoBehaviour {
     public float fuelGain;
     private playerGlobals globals;
     private charcoalSpawner charcoalSpawnerScript;
+    [Range(0.1f, 1.0f)]
+    public float volume;
+    public AudioClip splatSound;
+    public AudioSource audioSource;
 
     // Use this for initialization
     void Start() {
@@ -19,6 +23,7 @@ public class playerCollisions : MonoBehaviour {
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.layer == 12) { // collision with enemy projectile
             globals.health -= peaPodDamage;
+            audioSource.PlayOneShot(splatSound, volume);
             Destroy(collision.gameObject);
             // possible projectile animation on destroy
         } else if (collision.gameObject.layer == 14) { // collision with charcoal
@@ -30,6 +35,7 @@ public class playerCollisions : MonoBehaviour {
             charcoalSpawnerScript.currentNumberOfCharcoal -= 1;
         } else if (collision.gameObject.layer == 15) { // collision with broccoli
             globals.health -= broccoliDamage;
+            // play broccoli attack sound
             collision.collider.gameObject.SendMessage("turn hitbox off");
         } else if (collision.gameObject.layer == 16) { // collision with carrot
             globals.health -= carrotDamage;
