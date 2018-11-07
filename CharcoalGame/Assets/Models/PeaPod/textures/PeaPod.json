@@ -36,7 +36,7 @@
         "BALLS": {
             "shader": "Main shader"
         },
-        "SHAFT": {
+        "lambert1": {
             "shader": "Main shader"
         }
     }
