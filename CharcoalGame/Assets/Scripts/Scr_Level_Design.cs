@@ -12,6 +12,7 @@ public class Scr_Level_Design : MonoBehaviour {
     Rigidbody playerbody;
     public Terrain land;
     public Vector3 landdimension;
+    int phasetracker = 1;
 	// Use this for initialization
 	void Start () {
         spawn1 = transform.GetComponent<Scr_EnemySpawn>();
@@ -70,11 +71,13 @@ public class Scr_Level_Design : MonoBehaviour {
     {
 
         yield return new WaitForSeconds(2f);
-        int phase1spawnnumber = 100;
+        int phase2spawnnumber = 100;
+        numEnemyinWaves = phase2spawnnumber;
+        waveNuminfo.text = "Wave: " + numEnemyinWaves;
         int quadrant = 1;
         float waitbetweenwaves = 5;
         yield return new WaitForSeconds(2f);
-        while (phase1spawnnumber > 0)
+        while (phase2spawnnumber > 0)
         {
             //quadrant 1
             if (playerbody.position.x <= landdimension.x / 2 && playerbody.position.z <= landdimension.z / 2)
