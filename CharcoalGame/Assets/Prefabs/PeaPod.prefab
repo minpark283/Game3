@@ -111,8 +111,6 @@ GameObject:
   - component: {fileID: 4668886324994234}
   - component: {fileID: 33291314298000352}
   - component: {fileID: 23757277564292442}
-  - component: {fileID: 136140810254636472}
-  - component: {fileID: 54496501151555082}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -163,6 +161,9 @@ GameObject:
   - component: {fileID: 195441108543860302}
   - component: {fileID: 114776972568776672}
   - component: {fileID: 95834733498569540}
+  - component: {fileID: 114575592091623662}
+  - component: {fileID: 54686545453993690}
+  - component: {fileID: 136119847566377562}
   m_Layer: 0
   m_Name: PeaPod
   m_TagString: Untagged
@@ -626,12 +627,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1187099555458138}
   m_Mesh: {fileID: 4300000, guid: f50a9ce188ea50a4291969517eadaad0, type: 3}
---- !u!54 &54496501151555082
+--- !u!54 &54686545453993690
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1149629804640656}
+  m_GameObject: {fileID: 1268662799590542}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -659,6 +660,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114575592091623662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1268662799590542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ee86ea68fa6a142a0c611538f92389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peaPodDamage: 5
+  player: {fileID: 1180891238468436, guid: 0ea4e36e9ea4b8046b1eedc55048519e, type: 2}
 --- !u!114 &114776972568776672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -670,6 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15424aa065cec9849810b675a8624392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelinfo: {fileID: 0}
   speed: 2
   attackRange: 5
   fireCooldown: 1
@@ -685,12 +700,12 @@ MonoBehaviour:
   shootSound: {fileID: 0}
   audioSource: {fileID: 0}
   health: 10
---- !u!136 &136140810254636472
+--- !u!136 &136119847566377562
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1149629804640656}
+  m_GameObject: {fileID: 1268662799590542}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1

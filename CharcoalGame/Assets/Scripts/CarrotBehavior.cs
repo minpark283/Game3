@@ -46,6 +46,7 @@ public class CarrotBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         //navAgent.destination = player.transform.position;
         //print(midCharge);
         print(transform.rotation);

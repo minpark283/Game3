@@ -40,6 +40,7 @@ public class BroccoliBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         if (Mathf.Sqrt(((this.transform.position.x - player.transform.position.x) * (this.transform.position.x - player.transform.position.x))
             + ((this.transform.position.z - player.transform.position.z) * (this.transform.position.z - player.transform.position.z))) <= attackRange)
         {
