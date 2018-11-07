@@ -25,7 +25,7 @@ public class CarrotBehavior : MonoBehaviour {
 
     public float standUpTime;
 
-    float lastAttkTime = 0;
+    float lastAttkTime;
 
     // Use this for initialization
     void Start () {
@@ -36,6 +36,7 @@ public class CarrotBehavior : MonoBehaviour {
         navAgent.speed = speed;
         navAgent.destination = player.transform.position;
         anim = GetComponent<Animator>();
+        lastAttkTime = -attackCooldown;
     }
 	
 	// Update is called once per frame
@@ -43,6 +44,11 @@ public class CarrotBehavior : MonoBehaviour {
         //navAgent.destination = player.transform.position;
         //print(midCharge);
         print(target);
+        if(!charging && Time.time - lastAttkTime < attackCooldown)
+        {
+            navAgent.isStopped = false;
+            navAgent.destination = transform.position;
+        }
         
         if (!charging && Mathf.Sqrt(((this.transform.position.x - player.transform.position.x) * (this.transform.position.x - player.transform.position.x))
             + ((this.transform.position.z - player.transform.position.z) * (this.transform.position.z - player.transform.position.z))) <= attackRange
@@ -62,7 +68,7 @@ public class CarrotBehavior : MonoBehaviour {
                 }
             }
         }
-        else if (!charging && Time.time - lastAttkTime < attackCooldown)
+        else if (!charging && Time.time - lastAttkTime >= attackCooldown)
         {
             navAgent.isStopped = false;
             navAgent.destination = player.transform.position;
@@ -113,7 +119,7 @@ public class CarrotBehavior : MonoBehaviour {
     {
         print("prepare charge");
         lastAttkTime = Time.time;
-        charging = true;
+        //charging = true;
         navAgent.isStopped = true;
         target = player.transform.position;
         Quaternion direction = Quaternion.LookRotation(target - transform.position);
