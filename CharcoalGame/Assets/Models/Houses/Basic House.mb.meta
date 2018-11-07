@@ -6,6 +6,12 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: lambert1
+    2100002: Walls
+    2100004: Steps
+    2100006: Door
+    2100008: Windowframe
+    2100010: Glass
+    2100012: Roof
     2300000: //RootNode
     3300000: //RootNode
     4300000: pCube1
