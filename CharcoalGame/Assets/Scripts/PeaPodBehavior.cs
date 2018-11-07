@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class PeaPodBehavior : MonoBehaviour {
-    Scr_Level_Design levelinfo;
+    public GameObject levelinfo;
     public float speed;
     public float attackRange;
     public float fireCooldown;
@@ -33,7 +33,7 @@ public class PeaPodBehavior : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        levelinfo = transform.GetComponent<Scr_Level_Design>();
+        levelinfo = GameObject.Find("Enemy_Generator");
         player = GameObject.Find("Player");
         navAgent = GetComponent<NavMeshAgent>();
         navAgent.Warp(this.transform.position);
@@ -98,8 +98,9 @@ public class PeaPodBehavior : MonoBehaviour {
     void Die()
     {
         //Put other stuff, like animations, in here
-        levelinfo.numEnemyinWaves -= 1;
-        levelinfo.updateWaveText();
+        levelinfo.GetComponent<Scr_Level_Design>().numEnemyinWaves -= 1;
+        levelinfo.GetComponent<Scr_Level_Design>().updateWaveText();
+
         GameObject.Instantiate(deathAnim);
         deathAnim.transform.position = transform.position;
         GameObject.Destroy(this.gameObject);

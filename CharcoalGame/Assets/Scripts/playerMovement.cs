@@ -22,6 +22,7 @@ public class playerMovement : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        Cursor.visible = false;
         // get horizontal and vertical inputs for player movement
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");

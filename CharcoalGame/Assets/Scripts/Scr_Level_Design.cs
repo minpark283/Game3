@@ -208,7 +208,7 @@ public class Scr_Level_Design : MonoBehaviour {
                 {
                     quadrant = 4;
                 }
-            StartCoroutine(spawn1.spawn(5, quadrant, new int[5] { level2SpawnSeries[50 - phase3spawnnumber], level2SpawnSeries[50 - phase3spawnnumber + 1], level2SpawnSeries[50 - phase3spawnnumber + 2], level2SpawnSeries[50 - phase3spawnnumber + 3], level2SpawnSeries[50 - phase3spawnnumber + 4]}));
+            StartCoroutine(spawn1.spawn(5, quadrant, new int[5] { level3SpawnSeries[50 - phase3spawnnumber], level3SpawnSeries[50 - phase3spawnnumber + 1], level3SpawnSeries[50 - phase3spawnnumber + 2], level3SpawnSeries[50 - phase3spawnnumber + 3], level3SpawnSeries[50 - phase3spawnnumber + 4]}));
             phase3spawnnumber -= 5;
             yield return new WaitForSeconds(waitbetweenwaves);
         }

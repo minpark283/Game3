@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class CarrotBehavior : MonoBehaviour {
-    Scr_Level_Design levelinfo;
+    public GameObject levelinfo;
     public float speed;
     public float attackRange;
     public float attackCooldown;
@@ -34,7 +34,7 @@ public class CarrotBehavior : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        levelinfo = transform.GetComponent<Scr_Level_Design>();
+        levelinfo = GameObject.Find("Enemy_Generator");
         player = GameObject.Find("Player");
         navAgent = GetComponent<NavMeshAgent>();
         navAgent.Warp(this.transform.position);
@@ -48,11 +48,17 @@ public class CarrotBehavior : MonoBehaviour {
 	void Update () {
         //navAgent.destination = player.transform.position;
         //print(midCharge);
-        print(target);
+        print(transform.rotation);
+      
         if(!charging && Time.time - lastAttkTime < attackCooldown)
         {
             navAgent.isStopped = false;
             navAgent.destination = transform.position;
+        }
+        if(midCharge)
+        {
+            
+            transform.position = Vector3.Lerp(transform.position, target, .07f);
         }
         
         if (!charging && Mathf.Sqrt(((this.transform.position.x - player.transform.position.x) * (this.transform.position.x - player.transform.position.x))
@@ -118,8 +124,9 @@ public class CarrotBehavior : MonoBehaviour {
     void Die()
     {
         //Put other stuff, like animations, in here
-        levelinfo.numEnemyinWaves -= 1;
-        levelinfo.updateWaveText();
+        levelinfo.GetComponent<Scr_Level_Design>().numEnemyinWaves -= 1;
+        levelinfo.GetComponent<Scr_Level_Design>().updateWaveText();
+
         GameObject.Instantiate(deathAnim);
         deathAnim.transform.position = transform.position;
         GameObject.Destroy(this.gameObject);
@@ -145,7 +152,7 @@ public class CarrotBehavior : MonoBehaviour {
         navAgent.updateRotation = false;
         hitBox.SetActive(true);
         midCharge = true;
-        GetComponent<Rigidbody>().AddForce(transform.forward * chargeStrength, ForceMode.Impulse);
+       // GetComponent<Rigidbody>().AddForce(transform.forward * chargeStrength, ForceMode.Impulse);
         //audioSource.PlayOneShot(attackSound, volume);
     }
 

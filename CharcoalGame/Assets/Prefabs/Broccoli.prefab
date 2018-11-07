@@ -167,6 +167,9 @@ GameObject:
   - component: {fileID: 114964974945793384}
   - component: {fileID: 195550968674909094}
   - component: {fileID: 95475592701287338}
+  - component: {fileID: 114461690126047716}
+  - component: {fileID: 54383036875726914}
+  - component: {fileID: 65925524131102222}
   m_Layer: 0
   m_Name: Broccoli
   m_TagString: Untagged
@@ -311,7 +314,6 @@ GameObject:
   - component: {fileID: 33587415492931862}
   - component: {fileID: 23930209250113682}
   - component: {fileID: 65706450452255144}
-  - component: {fileID: 54671459195296226}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -642,7 +644,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1514013139112514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 49.44979, y: 0, z: 51.037502}
+  m_LocalPosition: {x: 25.110376, y: 0, z: 42.93454}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4107666073624118}
@@ -1095,12 +1097,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1737127415109702}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54671459195296226
+--- !u!54 &54383036875726914
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1737127415109702}
+  m_GameObject: {fileID: 1514013139112514}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -1122,6 +1124,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65925524131102222
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1514013139112514}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.998273, z: 1}
+  m_Center: {x: 0, y: 1.4922175, z: 0}
 --- !u!95 &95475592701287338
 Animator:
   serializedVersion: 3
@@ -1151,6 +1165,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc76cc961bde18c42abacce05e334e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114461690126047716
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1514013139112514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ee86ea68fa6a142a0c611538f92389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peaPodDamage: 5
+  player: {fileID: 1180891238468436, guid: 0ea4e36e9ea4b8046b1eedc55048519e, type: 2}
 --- !u!114 &114964974945793384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1168,7 +1195,6 @@ MonoBehaviour:
   attackDamage: 20
   player: {fileID: 0}
   deathAnim: {fileID: 1885559790442110, guid: f3427def98ab598408c314d114d0d7a1, type: 2}
-  hitBox: {fileID: 1042646553740316}
   health: 10
 --- !u!135 &135102841213835628
 SphereCollider:

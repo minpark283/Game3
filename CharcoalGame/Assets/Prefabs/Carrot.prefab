@@ -96,7 +96,6 @@ GameObject:
   - component: {fileID: 4263021605865660}
   - component: {fileID: 33805394195393054}
   - component: {fileID: 23644605414323764}
-  - component: {fileID: 136906259095310074}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -165,6 +164,9 @@ GameObject:
   - component: {fileID: 195704902352288028}
   - component: {fileID: 95261571462492014}
   - component: {fileID: 54720473451883306}
+  - component: {fileID: 136761902080197804}
+  - component: {fileID: 65840113675805010}
+  - component: {fileID: 114749405621036772}
   m_Layer: 0
   m_Name: Carrot
   m_TagString: Untagged
@@ -245,7 +247,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1540019487971944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.784004, y: 0.863, z: 23.81}
+  m_LocalPosition: {x: 55.23423, y: 1.25, z: 161.62846}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4263021605865660}
@@ -542,6 +544,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &65840113675805010
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1540019487971944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.2979999, z: 3.7757416}
+  m_Center: {x: 0, y: 1.5761406, z: 0.08730316}
 --- !u!95 &95261571462492014
 Animator:
   serializedVersion: 3
@@ -571,6 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e373af0b6ce2d4b9eb788ce2280762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelinfo: {fileID: 0}
   speed: 2
   attackRange: 20
   attackCooldown: 3
@@ -585,6 +600,19 @@ MonoBehaviour:
   chargeStrength: 15
   midCharge: 0
   standUpTime: 0
+--- !u!114 &114749405621036772
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1540019487971944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ee86ea68fa6a142a0c611538f92389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peaPodDamage: 0
+  player: {fileID: 0}
 --- !u!114 &114928945455435204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -609,19 +637,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136906259095310074
+--- !u!136 &136761902080197804
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1426258018333044}
+  m_GameObject: {fileID: 1540019487971944}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
-  m_Height: 2
+  m_Height: 3.8150592
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0.000000059604645, y: 0.9075296, z: -0.00000011920929}
 --- !u!195 &195704902352288028
 NavMeshAgent:
   m_ObjectHideFlags: 1
