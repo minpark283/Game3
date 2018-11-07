@@ -10,6 +10,7 @@ public class PeaPodBehavior : MonoBehaviour {
     public float fireCooldown;
     public float attackDamage;
     public GameObject player;
+    public GameObject deathAnim;
 
     //public GameObject hitBox;
     public GameObject projectileObject;
@@ -69,6 +70,11 @@ public class PeaPodBehavior : MonoBehaviour {
         {
             navAgent.isStopped = false;
         }
+
+        /*if (Input.GetKeyDown(KeyCode.D))
+        {
+            gameObject.SendMessage("Hit", 10);
+        }*/
     }
 
     void Hit(int damage)
@@ -88,6 +94,8 @@ public class PeaPodBehavior : MonoBehaviour {
         //Put other stuff, like animations, in here
         levelinfo.numEnemyinWaves -= 1;
         levelinfo.updateWaveText();
-        GameObject.Destroy(this);
+        GameObject.Instantiate(deathAnim);
+        deathAnim.transform.position = transform.position;
+        GameObject.Destroy(this.gameObject);
     }
 }

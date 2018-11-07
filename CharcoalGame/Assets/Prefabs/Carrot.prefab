@@ -576,8 +576,9 @@ MonoBehaviour:
   attackCooldown: 3
   attackDamage: 0
   player: {fileID: 0}
+  deathAnim: {fileID: 1126146184238100, guid: 55820773b7ead724ea00359e69ac8352, type: 2}
   hitBox: {fileID: 1517586010441146}
-  health: 0
+  health: 10
   charging: 0
   chargeStrength: 15
   midCharge: 0
