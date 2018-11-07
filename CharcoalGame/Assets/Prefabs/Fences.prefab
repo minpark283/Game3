@@ -81,8 +81,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4975575412680528}
-  - component: {fileID: 23724789696777848}
   - component: {fileID: 65615868575833108}
+  - component: {fileID: 23724789696777848}
   m_Layer: 0
   m_Name: Fences
   m_TagString: Untagged
@@ -450,7 +450,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1174857759860490}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -528,7 +528,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: d30675e080630074892a496fea6940d5, type: 3}
+  - {fileID: 2100000, guid: f6b457483b5f2e346adddfd8a0fe9556, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -554,7 +554,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1151371159918660}
-  m_Mesh: {fileID: 4300000, guid: d30675e080630074892a496fea6940d5, type: 3}
+  m_Mesh: {fileID: 4300000, guid: d5d71f05bb851004eb6cbe5d588855f6, type: 3}
 --- !u!65 &65615868575833108
 BoxCollider:
   m_ObjectHideFlags: 1

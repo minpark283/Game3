@@ -135,7 +135,7 @@ public class Scr_Level_Design : MonoBehaviour {
             {
                 quadrant = 4;
             }
-            StartCoroutine(spawn1.spawn(5, quadrant, new int[5] { 2, 2, 2, 2, 2 }));
+            StartCoroutine(spawn1.spawn(5, quadrant, new int[5] { 1,1,1,1, 1}));
             phase1spawnnumber -= 5;
             yield return new WaitForSeconds(waitbetweenwaves);
 
