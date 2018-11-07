@@ -23,10 +23,12 @@ public class playerFire : MonoBehaviour {
     void Update() {
         if (Input.GetMouseButtonDown(0) && (globals.fuel >= fireCost)) {
             GameObject projectile = (GameObject)Instantiate(projectileObject, transform.position, transform.rotation);
-            GameObject.Instantiate(particles);
+            ParticleSystem party = (ParticleSystem)Instantiate(particles, projectile.transform.position, projectile.transform.rotation);
+            
             projectile.layer = 13;
             projectile.GetComponent<Rigidbody>().velocity = projectile.transform.forward * fireSpeed;
             Destroy(projectile, fireRangeTimer);
+            Destroy(party, fireRangeTimer);
             Physics.IgnoreCollision(GetComponent<Collider>(), projectile.GetComponent<Collider>());
 
             audioSource.PlayOneShot(shootSound, volume);
