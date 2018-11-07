@@ -1,21 +1,48 @@
 fileFormatVersion: 2
-guid: fc33b77a4fc301247acc1bd3162a7fa2
+guid: e9d6135064a659c429371e08e41318eb
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: lambert1
-    2100002: Walls
-    2100004: Steps
-    2100006: Door
-    2100008: Windowframe
-    2100010: Glass
-    2100012: Roof
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: pCube1
-    2186277476908879412: ImportLogs
+    100000: group
+    100002: group1
+    100004: group_pasted__pSphere1
+    100006: left
+    100008: pasted__pSphere1
+    100010: pasted__pSphere1 1
+    100012: pCylinder1
+    100014: //RootNode
+    100016: pSphere1
+    100018: pSphere2
+    100020: transform1
+    100022: transform2
+    100024: transform3
+    100026: transform4
+    100028: transform5
+    100030: transform6
+    100032: transform7
+    400000: group
+    400002: group1
+    400004: group_pasted__pSphere1
+    400006: left
+    400008: pasted__pSphere1
+    400010: pasted__pSphere1 1
+    400012: pCylinder1
+    400014: //RootNode
+    400016: pSphere1
+    400018: pSphere2
+    400020: transform1
+    400022: transform2
+    400024: transform3
+    400026: transform4
+    400028: transform5
+    400030: transform6
+    400032: transform7
+    2000000: left
+    2100000: BALLS
+    2100002: lambert1
+    2300000: group_pasted__pSphere1
+    3300000: group_pasted__pSphere1
+    4300000: group_pasted__pSphere1
   externalObjects: {}
   materials:
     importMaterials: 1

@@ -11,6 +11,11 @@ ModelImporter:
     400004: pCube1
     2000000: back
     2100000: lambert1
+    2100002: Wall
+    2100004: Roof
+    2100006: Front_of_House
+    2100008: Doors
+    2100010: Windows
     2300000: pCube1
     3300000: pCube1
     4300000: pCube1

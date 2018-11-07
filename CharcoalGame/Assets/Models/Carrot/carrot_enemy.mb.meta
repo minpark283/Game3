@@ -24,6 +24,8 @@ ModelImporter:
     400016: transform3
     400018: transform4
     2100000: lambert1
+    2100002: lambert3
+    2100004: lambert2
     2300000: pCylinder5
     3300000: pCylinder5
     4300000: pCylinder5

@@ -1,21 +1,20 @@
 fileFormatVersion: 2
-guid: fc33b77a4fc301247acc1bd3162a7fa2
+guid: f3ffb137259e36144903264d41d31c9f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: lambert1
-    2100002: Walls
-    2100004: Steps
-    2100006: Door
-    2100008: Windowframe
-    2100010: Glass
-    2100012: Roof
+    2100000: Walls
+    2100002: Steps
+    2100004: Door
+    2100006: Windowframe
+    2100008: Glass
+    2100010: Roof
+    2100012: lambert1
     2300000: //RootNode
     3300000: //RootNode
     4300000: pCube1
-    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
