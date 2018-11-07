@@ -6,6 +6,7 @@ public class playerMelee : MonoBehaviour {
     public float meleeLength;
     public float meleeDamage;
     public float meleeCooldown;
+    public Animator playerAnimator;
     private float cooldown;
     private playerGlobals globals;
 
@@ -35,7 +36,11 @@ public class playerMelee : MonoBehaviour {
                 Debug.Log("Did not Hit");
             }
 
+            playerAnimator.SetBool("isAttacking", true);
+            playerAnimator.SetBool("isIdle", false);
+            Debug.Log("Here");
             cooldown = Time.time + meleeCooldown;
-        }
+        } else { playerAnimator.SetBool("isIdle", true); playerAnimator.SetBool("isAttacking", false); }
+       
     }
 }
