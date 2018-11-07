@@ -226,7 +226,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1156621969848896}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22.68, y: -0.08333334, z: -12.94}
+  m_LocalPosition: {x: 0, y: 1.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4382707551893252}
@@ -245,7 +245,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1540019487971944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.68, y: 0.08333334, z: 12.94}
+  m_LocalPosition: {x: 21.784004, y: 0.863, z: 23.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4263021605865660}
@@ -576,6 +576,9 @@ MonoBehaviour:
   attackCooldown: 3
   attackDamage: 0
   player: {fileID: 0}
+  volume: 0
+  attackSound: {fileID: 0}
+  audioSource: {fileID: 0}
   deathAnim: {fileID: 1126146184238100, guid: 55820773b7ead724ea00359e69ac8352, type: 2}
   hitBox: {fileID: 1517586010441146}
   health: 10
