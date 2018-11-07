@@ -87,7 +87,18 @@ public class Scr_Level_Design : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(numEnemyinWaves == 0)
+        {
+            phasetracker += 1;
+            if(phasetracker == 2)
+            {
+                StartCoroutine(Phase2());
+            }
+            if(phasetracker == 3)
+            {
+                StartCoroutine(Phase3());
+            }
+        }
 	}
 
     IEnumerator Phase1()
