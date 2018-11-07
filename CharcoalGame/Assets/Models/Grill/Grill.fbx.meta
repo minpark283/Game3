@@ -317,11 +317,66 @@ ModelImporter:
     4300000: pasted__group3_pasted__pasted__pCylinder2
     4300002: pCylinder4
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Arm_Cannon
+    second: {fileID: 2100000, guid: ba561b4228149ff459c76f6476c42410, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black_Grill
+    second: {fileID: 2100000, guid: a1fb778bd1749924f8a1c00f84eec220, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handles
+    second: {fileID: 2100000, guid: 5d06a95e4bf570d439dab1a63692910f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Silver_Arms_and_Legs
+    second: {fileID: 2100000, guid: b116558e278b18d41a065053e8b5c94a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spatula_Arm
+    second: {fileID: 2100000, guid: 0247b72dabb2ae44eab34d4e79c96b36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spatula_Handle
+    second: {fileID: 2100000, guid: 49171019d5e11b44e80785f6389910c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spatula_Metal_Part
+    second: {fileID: 2100000, guid: 0016011f0a646ed4d818e954707d2b6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel_Axel
+    second: {fileID: 2100000, guid: 063e07df0e4f66342a5a589169ca0508, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel_Black_Parts
+    second: {fileID: 2100000, guid: a2dd155c9ee0f1541afb7f4b5db8de3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel_White_Parts
+    second: {fileID: 2100000, guid: 88cf7311087e37b4b9a052aac663f165, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: ab44803d2c4b2654396c142389b15c65, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
-    materialSearch: 1
+    materialSearch: 0
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
