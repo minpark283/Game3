@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 65663735746579620}
   - component: {fileID: 65897088916207146}
   - component: {fileID: 23926187940408174}
+  - component: {fileID: 114010378208990398}
   m_Layer: 0
   m_Name: House_2
   m_TagString: Untagged
@@ -208,3 +209,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.035215285, y: 0.05048479, z: 0.08746645}
   m_Center: {x: 0.03474822, y: 0.0067195366, z: -0.026327638}
+--- !u!114 &114010378208990398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644282516134468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c08b9c25d93954b9905cd0929581ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splatSound: {fileID: 8300000, guid: 50e70e852edf1cd489e3ac9a76d08e4f, type: 3}
+  audioSource: {fileID: 82163135669098028, guid: c7fcd0485c67a5a469aa8d4ffdccf2a9,
+    type: 2}

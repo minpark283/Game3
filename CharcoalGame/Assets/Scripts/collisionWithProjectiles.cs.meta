@@ -3,7 +3,10 @@ guid: b1c08b9c25d93954b9905cd0929581ff
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - splatSound: {fileID: 8300000, guid: 50e70e852edf1cd489e3ac9a76d08e4f, type: 3}
+  - audioSource: {fileID: 82163135669098028, guid: c7fcd0485c67a5a469aa8d4ffdccf2a9,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
