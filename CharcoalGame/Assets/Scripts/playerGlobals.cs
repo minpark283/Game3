@@ -8,8 +8,6 @@ public class playerGlobals : MonoBehaviour {
     public float fuel = 100;
     player_UI playerdata;
     Scr_StageLoader stage;
-    public AudioSource audioSource;
-    public AudioClip audioClip;
 
     // Use this for initialization
     void Start () {
@@ -20,14 +18,11 @@ public class playerGlobals : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        audioSource.clip = audioClip;
-        audioSource.Play();
-
         playerdata.FuelBar.value = fuel;
         playerdata.HealthBar.value = health;
 
         if(health <= 0) {
-            stage.ChangeScene("LoseScene");
+            SceneManager.LoadScene(4);
             // Destroy player
             // go to game over screen
             // other death stuff

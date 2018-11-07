@@ -942,8 +942,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelinfo: {fileID: 0}
-  speed: 15
-  attackRange: 5
+  speed: 20
+  attackRange: 8
   attackPerSecond: 1
   attackDamage: 20
   player: {fileID: 0}
