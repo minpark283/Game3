@@ -50,15 +50,18 @@ public class Scr_EnemySpawn : MonoBehaviour {
                 
                 case 1:
                     GameObject b = (GameObject)Instantiate(spawn1, location, Quaternion.identity);
+                    b.layer = 11;
                     break;
                 case 2:
                     GameObject c = (GameObject)Instantiate(spawn1, location, Quaternion.identity);
+                    c.layer = 11;
                     break;
                 case 3:
                     GameObject p = (GameObject)Instantiate(spawn1, location, Quaternion.identity);
+                    p.layer = 11;
                     break;
             }
-            s.layer = 11;
+           
             yield return new WaitForSeconds(timeBetweenSpawn);
         }
 
