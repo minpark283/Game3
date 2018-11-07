@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 4382539865722908}
   - component: {fileID: 195441108543860302}
   - component: {fileID: 114776972568776672}
+  - component: {fileID: 95834733498569540}
   m_Layer: 0
   m_Name: PeaPod
   m_TagString: Untagged
@@ -639,27 +640,48 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!95 &95834733498569540
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1268662799590542}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0684d1e4518ceff42a257c451337773e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114776972568776672
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1268662799590542}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15424aa065cec9849810b675a8624392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelinfo: {fileID: 0}
   speed: 2
   attackRange: 5
   fireCooldown: 1
   attackDamage: 0
-  player: {fileID: 1180891238468436, guid: 0ea4e36e9ea4b8046b1eedc55048519e, type: 2}
+  player: {fileID: 0}
+  deathAnim: {fileID: 1846033797252938, guid: e27fef541888a8e48816217d42e24b0b, type: 2}
   projectileObject: {fileID: 1425351863963050, guid: dc28b85b372b63540a1d57035827e6fb,
     type: 2}
   fireSpeed: 8
   fireRangeTimer: 1
-  health: 0
+  staggered: 0
+  health: 10
 --- !u!136 &136140810254636472
 CapsuleCollider:
   m_ObjectHideFlags: 1

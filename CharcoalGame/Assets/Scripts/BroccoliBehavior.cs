@@ -10,6 +10,7 @@ public class BroccoliBehavior : MonoBehaviour {
     public float attackPerSecond;
     public float attackDamage;
     public GameObject player;
+    public GameObject deathAnim;
 
     public GameObject hitBox;
 
@@ -59,26 +60,34 @@ public class BroccoliBehavior : MonoBehaviour {
             anim.applyRootMotion = true;
             navAgent.destination = player.transform.position;
         }
+
+        //For testing
+        /*if(Input.GetKeyDown(KeyCode.D))
+        {
+            gameObject.SendMessage("Hit", 10);
+        }*/
 		
 	}
 
-    void Hit(int damage)
+    public void Hit(int damage)
     {
         //Deal damage and check for death
         health = health - damage;
         if(health <= 0)
         {
-            //play a death animation maybe?
+            
             this.Die();
         }
         //Possibly a hit animation?
     }
 
-    void Die()
+    public void Die()
     {
         //Put other stuff, like animations, in here
         levelinfo.numEnemyinWaves -= 1;
         levelinfo.updateWaveText();
-        GameObject.Destroy(this);
+        GameObject.Instantiate(deathAnim);
+        deathAnim.transform.position = transform.position;
+        GameObject.Destroy(this.gameObject);
     }
 }

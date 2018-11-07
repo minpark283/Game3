@@ -18,7 +18,7 @@ public class Scr_EnemySpawn : MonoBehaviour {
        
 	}
 	
-	public IEnumerator spawn(float numofSpawn, int quad, int id)
+	public IEnumerator spawn(float numofSpawn, int quad, int[] id)
     {
         Vector3 location = new Vector3(0, 0, 0);
         switch (quad)
@@ -45,7 +45,7 @@ public class Scr_EnemySpawn : MonoBehaviour {
 
             Vector3 randomize = new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5));
             location = location + randomize;
-            switch (id)
+            switch (id[i])
             {
                 
                 case 1:
@@ -53,11 +53,11 @@ public class Scr_EnemySpawn : MonoBehaviour {
                     b.layer = 11;
                     break;
                 case 2:
-                    GameObject c = (GameObject)Instantiate(spawn1, location, Quaternion.identity);
+                    GameObject c = (GameObject)Instantiate(spawnAdv, location, Quaternion.identity);
                     c.layer = 11;
                     break;
                 case 3:
-                    GameObject p = (GameObject)Instantiate(spawn1, location, Quaternion.identity);
+                    GameObject p = (GameObject)Instantiate(spawnRange, location, Quaternion.identity);
                     p.layer = 11;
                     break;
             }

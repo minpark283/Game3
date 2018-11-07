@@ -14,6 +14,7 @@ public class CarrotBehavior : MonoBehaviour {
     public float volume;
     public AudioClip attackSound;
     public AudioSource audioSource;
+    public GameObject deathAnim;
 
     public GameObject hitBox;
 
@@ -94,8 +95,12 @@ public class CarrotBehavior : MonoBehaviour {
             target = new Vector3(1000, 1000, 1000);
         }
 
-        
-        
+        /*if (Input.GetKeyDown(KeyCode.D))
+        {
+            gameObject.SendMessage("Hit", 10);
+        }*/
+
+
     }
 
     void Hit(int damage)
@@ -115,7 +120,9 @@ public class CarrotBehavior : MonoBehaviour {
         //Put other stuff, like animations, in here
         levelinfo.numEnemyinWaves -= 1;
         levelinfo.updateWaveText();
-        GameObject.Destroy(this);
+        GameObject.Instantiate(deathAnim);
+        deathAnim.transform.position = transform.position;
+        GameObject.Destroy(this.gameObject);
     }
 
 
