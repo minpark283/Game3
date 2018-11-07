@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class BroccoliBehavior : MonoBehaviour {
-    public Scr_Level_Design levelinfo;
+    Scr_Level_Design levelinfo;
     public float speed;
     public float attackRange;
     public float attackPerSecond;
