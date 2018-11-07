@@ -617,7 +617,7 @@ MonoBehaviour:
   attackDamage: 0
   player: {fileID: 0}
   deathAnim: {fileID: 1846033797252938, guid: e27fef541888a8e48816217d42e24b0b, type: 2}
-  projectileObject: {fileID: 1425351863963050, guid: dc28b85b372b63540a1d57035827e6fb,
+  projectileObject: {fileID: 1313616527266020, guid: 80199b14ed3da90489caa3995509cd4a,
     type: 2}
   fireSpeed: 8
   fireRangeTimer: 1

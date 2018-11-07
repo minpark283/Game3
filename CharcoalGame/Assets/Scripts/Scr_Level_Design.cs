@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Scr_Level_Design : MonoBehaviour {
 
     Scr_EnemySpawn spawn1;
+    Scr_StageLoader stage;
     public Text waveNuminfo;
     public Text waveNuminfo2;
     public GameObject playerobj;
@@ -216,7 +217,7 @@ public class Scr_Level_Design : MonoBehaviour {
             phase3spawnnumber -= 5;
             yield return new WaitForSeconds(waitbetweenwaves);
         }
-
+        stage.ChangeScene("WinScene");
         }
     public void updateWaveText()
     {
