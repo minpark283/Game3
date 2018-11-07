@@ -41,6 +41,39 @@ public class Scr_Level_Design : MonoBehaviour {
             1, 2, 3, 3, 3 };
 
 
+        level3SpawnSeries = new int[]
+            {1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1,
+            1, 1, 3, 3, 3,
+            2, 2, 3, 3, 2,
+            2, 2, 3, 3, 2,
+            2, 2, 2, 2, 2,
+            2, 2, 2, 2, 2,
+            2, 2, 2, 2, 2,
+            3, 3, 3, 3, 3,
+            3, 3, 3, 3, 3,
+            2, 2, 2, 3, 3,
+            1, 1, 2, 3, 3,
+            1, 1, 1, 1, 1,
+            3, 2, 2, 1, 3,
+            1, 2, 3, 2, 3,
+            1, 1, 1, 3, 3,
+            1, 1, 2, 2, 2,
+            3, 3, 3, 2, 1,
+            3, 2, 3, 2, 1,
+            1, 1, 1, 1, 1,
+            2, 2, 2, 2, 2,
+            3, 3, 3, 3, 3,
+            1, 2, 1, 2, 1,
+            1, 1, 1, 1, 1,
+            3, 2, 3, 2, 3,
+            2, 2, 2, 2, 2,
+            3, 3, 3, 3, 3,
+            1, 1, 2, 3, 3,
+            3, 3, 3, 3, 3};
+
+
 
 
         spawn1 = transform.GetComponent<Scr_EnemySpawn>();
@@ -127,7 +160,7 @@ public class Scr_Level_Design : MonoBehaviour {
             {
                 quadrant = 4;
             }
-            StartCoroutine(spawn1.spawn(5, quadrant, new int[5] { level2SpawnSeries[phase2spawnnumber], level2SpawnSeries[phase2spawnnumber] + 1, level2SpawnSeries[phase2spawnnumber] + 2, level2SpawnSeries[phase2spawnnumber] + 3, level2SpawnSeries[phase2spawnnumber] + 4 }));
+            StartCoroutine(spawn1.spawn(5, quadrant, new int[5] { level2SpawnSeries[50 - phase2spawnnumber], level2SpawnSeries[50 - phase2spawnnumber + 1], level2SpawnSeries[50 - phase2spawnnumber + 2], level2SpawnSeries[50 - phase2spawnnumber + 3], level2SpawnSeries[50 - phase2spawnnumber + 4] }));
             phase2spawnnumber -= 5;
             yield return new WaitForSeconds(waitbetweenwaves);
         }
@@ -136,11 +169,11 @@ public class Scr_Level_Design : MonoBehaviour {
     IEnumerator Phase3()
         {
             yield return new WaitForSeconds(2f);
-            int phase1spawnnumber = 150;
+            int phase3spawnnumber = 150;
             int quadrant = 1;
             float waitbetweenwaves = 5;
             yield return new WaitForSeconds(2f);
-            while (phase1spawnnumber > 0)
+            while (phase3spawnnumber > 0)
             {
                 //quadrant 1
                 if (playerbody.position.x <= landdimension.x / 2 && playerbody.position.z <= landdimension.z / 2)
@@ -162,7 +195,11 @@ public class Scr_Level_Design : MonoBehaviour {
                 {
                     quadrant = 4;
                 }
-            }
+            StartCoroutine(spawn1.spawn(5, quadrant, new int[5] { level2SpawnSeries[50 - phase3spawnnumber], level2SpawnSeries[50 - phase3spawnnumber + 1], level2SpawnSeries[50 - phase3spawnnumber + 2], level2SpawnSeries[50 - phase3spawnnumber + 3], level2SpawnSeries[50 - phase3spawnnumber + 4]}));
+            phase3spawnnumber -= 5;
+            yield return new WaitForSeconds(waitbetweenwaves);
+        }
+
         }
     public void updateWaveText()
     {
