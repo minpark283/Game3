@@ -39,13 +39,12 @@ ModelImporter:
     2300000: pCube9
     3300000: pCube9
     4300000: pCube9
-    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
-    materialSearch: 1
-    materialLocation: 1
+    materialSearch: 0
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

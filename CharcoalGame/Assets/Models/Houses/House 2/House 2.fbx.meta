@@ -1,26 +1,30 @@
 fileFormatVersion: 2
-guid: 4dae04fd29515ab4b93e1449cf006240
+guid: 3b275d42f76e758438604ec5c5935069
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: Walls
-    2100002: Steps
-    2100004: Door
-    2100006: Windowframe
-    2100008: Glass
-    2100010: Roof
-    2100012: lambert1
-    2300000: //RootNode
-    3300000: //RootNode
+    100000: back
+    100002: //RootNode
+    100004: pCube1
+    400000: back
+    400002: //RootNode
+    400004: pCube1
+    2000000: back
+    2100000: Wall
+    2100002: Roof
+    2100004: Front_of_House
+    2100006: Doors
+    2100008: Windows
+    2100010: lambert1
+    2300000: pCube1
+    3300000: pCube1
     4300000: pCube1
   externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
-    materialSearch: 1
-    materialLocation: 1
+    materialSearch: 0
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
