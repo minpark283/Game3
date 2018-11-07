@@ -19,7 +19,8 @@ public class playerMelee : MonoBehaviour {
         if (Input.GetMouseButton(1) && (Time.time > cooldown)) {
             RaycastHit hit;
             int layerMaskTerrain = 1 << 10;
-            int layerMaskEnemies = 1 << 11;
+            int layerMaskEnemies = 1 << 15;
+            int layerMaskEnemies2 = 1 << 16;
 
             // Does the ray intersect any objects excluding the player layer
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, meleeLength, layerMaskTerrain)) {
@@ -28,7 +29,12 @@ public class playerMelee : MonoBehaviour {
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.blue, 5f, true);
                 Debug.Log("Hit Terrain");
             } else if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, meleeLength, layerMaskEnemies)) {
-                // hit.collider -= (meleeDamage * Time.deltaTime); // take health from enemy hit
+                hit.collider.gameObject.SendMessage("Hit", 10);
+
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.red, 5f, true);
+                Debug.Log("Hit Enemy");
+            } else if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, meleeLength, layerMaskEnemies2)) {
+                hit.collider.gameObject.SendMessage("Hit", 10);
 
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.red, 5f, true);
                 Debug.Log("Hit Enemy");
