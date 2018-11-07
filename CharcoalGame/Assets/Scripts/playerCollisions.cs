@@ -32,10 +32,11 @@ public class playerCollisions : MonoBehaviour {
             globals.fuel += fuelGain;
             if (globals.fuel > 100) { globals.fuel = 100; }
             playerAnimator.SetBool("isPickingUp", true);
-            playerAnimator.SetBool("isAttacking", false);
+     
             Debug.Log("picked up");
             Destroy(collision.gameObject);
             charcoalSpawnerScript.currentNumberOfCharcoal -= 1;
+            playerAnimator.SetBool("isPickingUp", false);
         } else if (collision.gameObject.layer == 15) { // collision with broccoli
             globals.health -= broccoliDamage;
             // play broccoli attack sound
