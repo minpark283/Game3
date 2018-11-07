@@ -7,12 +7,13 @@ public class Scr_Level_Design : MonoBehaviour {
 
     Scr_EnemySpawn spawn1;
     public Text waveNuminfo;
+    public Text waveNuminfo2;
     public GameObject playerobj;
     public int numEnemyinWaves = 50;
     Rigidbody playerbody;
     public Terrain land;
     public Vector3 landdimension;
-    int phasetracker = 1;
+    public int phasetracker = 1;
 
     int[] level2SpawnSeries = new int[100];
     int[] level3SpawnSeries = new int[150];
@@ -107,7 +108,8 @@ public class Scr_Level_Design : MonoBehaviour {
     {
         int phase1spawnnumber = 25;
         numEnemyinWaves = phase1spawnnumber;
-        waveNuminfo.text = "Wave: " + numEnemyinWaves;
+        waveNuminfo.text = "Phase: " + this.phasetracker;
+        waveNuminfo2.text = "Enemies Left: " + numEnemyinWaves;
         int quadrant = 1;
         float waitbetweenwaves = 5;
         yield return new WaitForSeconds(2f);
@@ -146,8 +148,8 @@ public class Scr_Level_Design : MonoBehaviour {
 
         yield return new WaitForSeconds(2f);
         int phase2spawnnumber = 50;
-        numEnemyinWaves = phase2spawnnumber;
-        waveNuminfo.text = "Wave: " + numEnemyinWaves;
+        waveNuminfo.text = "Phase: " + this.phasetracker;
+        waveNuminfo2.text = "Enemies Left: " + numEnemyinWaves;
         int quadrant = 1;
         float waitbetweenwaves = 10;
         yield return new WaitForSeconds(2f);
@@ -183,7 +185,9 @@ public class Scr_Level_Design : MonoBehaviour {
         {
             yield return new WaitForSeconds(2f);
             int phase3spawnnumber = 75;
-            int quadrant = 1;
+            waveNuminfo.text = "Phase: " + this.phasetracker;
+            waveNuminfo2.text = "Enemies Left: " + numEnemyinWaves;
+        int quadrant = 1;
             float waitbetweenwaves = 10;
             yield return new WaitForSeconds(2f);
             while (phase3spawnnumber > 0)
@@ -216,6 +220,7 @@ public class Scr_Level_Design : MonoBehaviour {
         }
     public void updateWaveText()
     {
-        waveNuminfo.text = "Wave: " + numEnemyinWaves;
+        waveNuminfo.text = "Phase: " + this.phasetracker;
+        waveNuminfo2.text = "Enemies Left: " + numEnemyinWaves;
     }
 }
