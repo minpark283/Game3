@@ -6,9 +6,6 @@ using UnityEngine.UI;
 public class Scr_Level_Design : MonoBehaviour {
 
     Scr_EnemySpawn spawn1;
-    Scr_EnemySpawn spawnRange;
-    Scr_EnemySpawn spawnAdv;
-    Scr_EnemySpawn spawnBoss;
     public Text waveNuminfo;
     public GameObject playerobj;
     public int numEnemyinWaves;
@@ -61,7 +58,7 @@ public class Scr_Level_Design : MonoBehaviour {
             {
                 quadrant = 4;
             }
-            StartCoroutine(spawn1.spawn(5, quadrant));
+            StartCoroutine(spawn1.spawn(5, quadrant, 1));
             phase1spawnnumber -= 5;
             yield return new WaitForSeconds(waitbetweenwaves);
 
