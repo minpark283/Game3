@@ -7,7 +7,11 @@ public class playerFire : MonoBehaviour {
     public float fireDamage;
     public float fireSpeed;
     public float fireRangeTimer;
+    [Range(0.1f, 1.0f)]
+    public float volume;
     public GameObject projectileObject;
+    public AudioClip shootSound;
+    public AudioSource audioSource;
     private playerGlobals globals;
 
     // Use this for initialization
@@ -24,6 +28,7 @@ public class playerFire : MonoBehaviour {
             Destroy(projectile, fireRangeTimer);
             Physics.IgnoreCollision(GetComponent<Collider>(), projectile.GetComponent<Collider>());
 
+            audioSource.PlayOneShot(shootSound, volume);
             globals.fuel -= fireCost;
         }
     }
