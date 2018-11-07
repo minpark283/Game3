@@ -7,8 +7,11 @@ public class playerGlobals : MonoBehaviour {
     public float fuel = 100;
     player_UI playerdata;
     Scr_StageLoader stage;
-	// Use this for initialization
-	void Start () {
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
+    // Use this for initialization
+    void Start () {
         playerdata = transform.GetComponent<player_UI>();
         playerdata.HealthBar.value = health;
         playerdata.FuelBar.value = fuel;
@@ -16,6 +19,9 @@ public class playerGlobals : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        audioSource.clip = audioClip;
+        audioSource.Play();
+
         playerdata.FuelBar.value = fuel;
         playerdata.HealthBar.value = health;
 
