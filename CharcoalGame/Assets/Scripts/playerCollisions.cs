@@ -27,24 +27,20 @@ public class playerCollisions : MonoBehaviour {
             globals.health -= peaPodDamage;
             audioSource.PlayOneShot(splatSound, volume);
             Destroy(collision.gameObject);
-            playerAnimator.SetBool("isIdle", true);
             // possible projectile animation on destroy
         } else if (collision.gameObject.layer == 14) { // collision with charcoal
             globals.fuel += fuelGain;
             if (globals.fuel > 100) { globals.fuel = 100; }
             playerAnimator.SetBool("isPickingUp", true);
+            playerAnimator.SetBool("isAttacking", false);
             Debug.Log("picked up");
             Destroy(collision.gameObject);
             charcoalSpawnerScript.currentNumberOfCharcoal -= 1;
         } else if (collision.gameObject.layer == 15) { // collision with broccoli
             globals.health -= broccoliDamage;
-            playerAnimator.SetBool("isIdle", true);
             // play broccoli attack sound
         } else if (collision.gameObject.layer == 16) { // collision with carrot
             globals.health -= carrotDamage;
-            playerAnimator.SetBool("isIdle", true);
-        } else {
-            playerAnimator.SetBool("isIdle", true);
         }
     }
 }
