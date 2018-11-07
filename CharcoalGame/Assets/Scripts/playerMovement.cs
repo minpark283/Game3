@@ -22,7 +22,10 @@ public class playerMovement : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        // cursor stuff to improve gameplay
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         // get horizontal and vertical inputs for player movement
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");

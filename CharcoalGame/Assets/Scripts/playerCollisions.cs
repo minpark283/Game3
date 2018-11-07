@@ -30,20 +30,13 @@ public class playerCollisions : MonoBehaviour {
             globals.fuel += fuelGain;
             if (globals.fuel > 100) { globals.fuel = 100; }
             // animation for eating charcoal with spatula
-            // spawn another charcoal
             Destroy(collision.gameObject);
             charcoalSpawnerScript.currentNumberOfCharcoal -= 1;
         } else if (collision.gameObject.layer == 15) { // collision with broccoli
-            Debug.Log("NBVJEIORGVEUI ATTK");
-
             globals.health -= broccoliDamage;
             // play broccoli attack sound
-            collision.collider.gameObject.SendMessage("turn hitbox off");
         } else if (collision.gameObject.layer == 16) { // collision with carrot
-            Debug.Log("CARROT ATTK");
             globals.health -= carrotDamage;
-
-            //collision.collider.gameObject.SendMessage("turn hitbox off");
         }
     }
 }
