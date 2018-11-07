@@ -1,35 +1,44 @@
 fileFormatVersion: 2
-guid: 987b61899943e5740a8b0f7451f01a11
+guid: 072cb9455a8f7864388d50c9ef72ad49
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: pCylinder1
-    100004: pCylinder2
-    100006: pCylinder3
-    100008: pCylinder4
-    100010: pCylinder5
-    100012: transform1
-    100014: transform2
-    100016: transform3
-    100018: transform4
+    100002: pCube2
+    100004: pCube3
+    100006: pCube4
+    100008: pCube5
+    100010: pCube6
+    100012: pCube7
+    100014: pCube8
+    100016: pCube9
+    100018: transform1
+    100020: transform2
+    100022: transform3
+    100024: transform4
+    100026: transform5
+    100028: transform6
+    100030: transform7
     400000: //RootNode
-    400002: pCylinder1
-    400004: pCylinder2
-    400006: pCylinder3
-    400008: pCylinder4
-    400010: pCylinder5
-    400012: transform1
-    400014: transform2
-    400016: transform3
-    400018: transform4
-    2100000: lambert1
-    2100002: lambert3
-    2100004: lambert2
-    2300000: pCylinder5
-    3300000: pCylinder5
-    4300000: pCylinder5
-    2186277476908879412: ImportLogs
+    400002: pCube2
+    400004: pCube3
+    400006: pCube4
+    400008: pCube5
+    400010: pCube6
+    400012: pCube7
+    400014: pCube8
+    400016: pCube9
+    400018: transform1
+    400020: transform2
+    400022: transform3
+    400024: transform4
+    400026: transform5
+    400028: transform6
+    400030: transform7
+    2100000: fence
+    2300000: pCube9
+    3300000: pCube9
+    4300000: pCube9
   externalObjects: {}
   materials:
     importMaterials: 1
