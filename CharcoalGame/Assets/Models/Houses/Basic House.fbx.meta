@@ -1,45 +1,20 @@
 fileFormatVersion: 2
-guid: 072cb9455a8f7864388d50c9ef72ad49
+guid: f3ffb137259e36144903264d41d31c9f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: pCube2
-    100004: pCube3
-    100006: pCube4
-    100008: pCube5
-    100010: pCube6
-    100012: pCube7
-    100014: pCube8
-    100016: pCube9
-    100018: transform1
-    100020: transform2
-    100022: transform3
-    100024: transform4
-    100026: transform5
-    100028: transform6
-    100030: transform7
     400000: //RootNode
-    400002: pCube2
-    400004: pCube3
-    400006: pCube4
-    400008: pCube5
-    400010: pCube6
-    400012: pCube7
-    400014: pCube8
-    400016: pCube9
-    400018: transform1
-    400020: transform2
-    400022: transform3
-    400024: transform4
-    400026: transform5
-    400028: transform6
-    400030: transform7
-    2100000: fence
-    2300000: pCube9
-    3300000: pCube9
-    4300000: pCube9
-    2186277476908879412: ImportLogs
+    2100000: Walls
+    2100002: Steps
+    2100004: Door
+    2100006: Windowframe
+    2100008: Glass
+    2100010: Roof
+    2100012: lambert1
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pCube1
   externalObjects: {}
   materials:
     importMaterials: 1

@@ -14,6 +14,19 @@ ModelImporter:
     100016: transform3
     100018: transform4
     400000: //RootNode
+<<<<<<< HEAD:CharcoalGame/Assets/Models/Houses/Basic House.mb.meta
+    2100000: lambert1
+    2100002: Walls
+    2100004: Steps
+    2100006: Door
+    2100008: Windowframe
+    2100010: Glass
+    2100012: Roof
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pCube1
+    2186277476908879412: ImportLogs
+=======
     400002: pCylinder1
     400004: pCylinder2
     400006: pCylinder3
@@ -28,6 +41,7 @@ ModelImporter:
     2300000: pCylinder5
     3300000: pCylinder5
     4300000: pCylinder5
+>>>>>>> Art:CharcoalGame/Assets/Models/Carrot/carrot_enemy.fbx.meta
   externalObjects: {}
   materials:
     importMaterials: 1
